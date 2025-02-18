@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nesting Lists</title>
+  </head>
+  <body>
+    <!--
+        It is okay to nest one list inside another list.
+        For example, you might want to have some sub bullets sitting below a top level bullet
+    -->
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Remove the skin from the garlic, and chop coarsely</li>
+      <li>Remove all the seeds and stalk from the pepper, and chop coarsely</li>
+      <li>Add all the ingredients into a food processor</li>
+
+      <!--
+        The last two bullets are very closely related to the bullet before them, they are like sub instructions that fit under the fourth bullet.
+        It makes sense to nest them in their own unordered list, and put thet list inside the fourth bullet.
+      -->
+      <li>
+        Process all the ingredients into a paste.
+        <ul>
+          <li>
+            If you want a coarse "chunky" hummus, process it for a short time.
+          </li>
+          <li>If you want a smooth hummus, process it for a longer time</li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>
