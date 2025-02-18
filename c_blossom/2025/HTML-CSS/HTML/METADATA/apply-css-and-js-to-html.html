@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="my-css-file.css" />
+    <script src="my-js-file.js" defer></script>
+    <title>Apply CSS and JS to HTML</title>
+  </head>
+  <body>
+    <!--
+    Websites employ CSS to make them look cool, and JS for interactive functionality like games, video players, maps, forms, etc.
+    We use the link element and the script element to apply these two respectively.
+
+    link element always goes inside the document's head.
+    Takes two attributes: rel="stylesheet" to indiacte it is the document's stylesheet;
+                          href="my-css-file.css" contains the path to the stylesheet file.
+
+    script element should also go in the document's head.
+        src attribute contains the path to the JS you want to load.
+        defer attribute which instructs the browser to load the JS after the page has finished parsing the HTML
+            Makes sure all the HTML is loaded before the JS runs so you dont get errors resulting from JS trying to access elements that do not exist on the page yet.
+
+        the script element is not a void element, so it should have a closing tag.
+
+        Also instead of pointing to an external script file, you can choose to put your script inside the script element itself.
+    -->
+  </body>
+</html>
