@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Span Element</title>
+    <link rel="stylesheet" href="my-css.css" />
+    <link rel="stylesheet" href="span.css" />
+  </head>
+  <body>
+    <!--
+    Span is a generic inline container
+    It does not inherently represent anything
+
+    It is used to group text or elements for scripting or styling purposes.
+
+    On its own it does not have any predefined meaning or styling
+
+    Primarily used for applying CSS styles(using the class or id attributes) or because they share attribute values such as lang,or JS manipulation to specific portions of content within a larger block.
+
+    Should be used only when no other semantic element is appropriate.
+
+    Very much like div.
+    But div is a block level element and span is an inline-level element.
+
+    Span only includes global attributes.
+    
+    -->
+    <p>
+      Add the <span class="ingredient">basil</span>,
+      <span class="ingredient">pine nuts</span> and
+      <span class="ingredient">garlic</span> to a blender and blend into a
+      paste.
+    </p>
+
+    <p>
+      Gradually add the <span class="ingredient">olive oil</span> while running
+      the blender slowly.
+    </p>
+
+    <p>
+      Welcome to <span style="color: aqua; font-weight: bold">FlickZone!</span>
+    </p>
+
+    <p>Click the word:<span id="highlight">Hello!</span></p>
+
+    <script>
+      document
+        .getElementById("highlight")
+        .addEventListener(
+          "click",
+          () => (this.style.backgroundColor = "yellow")
+        );
+    </script>
+
+    <li>
+      <span>
+        <a href="portfolio.html">See My Portfolio</a>
+      </span>
+    </li>
+  </body>
+</html>
