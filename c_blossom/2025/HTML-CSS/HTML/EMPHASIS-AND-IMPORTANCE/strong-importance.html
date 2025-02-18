@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The <strong> element</title>
+  </head>
+  <body>
+    <!--
+    To emhasize important words, we bold them in written language.
+    In HTML, we use the <strong>(strong importance) element to achieve this.
+        Makes the document more useful. 
+        Also recognized by screen readers, which can be configured to speak them in a different tone of voice.
+        Browsers style these as bold text by default
+        Dont use this tag purely for bold styling. For that use a span element and some CSS, or b element.
+
+    -->
+
+    <p>This liquid is <strong>highly toxic</strong></p>
+
+    <p>I am counting on you. <strong>Do not</strong> be late!</p>
+
+    <!--
+    You can nest strong and e,phasis inside one another if desired.
+    -->
+
+    <p>
+      This liquid is <strong>highly toxic</strong> - if you drink it,
+      <strong>you may <em>die</em></strong>
+    </p>
+
+    <!--
+    Scientific Names
+
+    <i> is used to convey a meaning traditionally conveyed by italics eg foreign words, taxonomic designation, technical terms, a thought...
+    -->
+    <p>
+      The Ruby throated hummingbird (<i>Archilobus colubris</i>) is the only
+      species of hummingbird that breeds in eastern North America.
+    </p>
+
+    <!--
+    Foreign Words
+    -->
+    <p>The worg <i>Bonjour</i> is French for <i>Hello</i></p>
+
+    <p>
+      The menu was a sea of exotic words such as
+      <i lang="uk-latn">vatrushka</i>, <i lang="id">nasi goreng</i>, and
+      <i lang="French">soupe a l'oignon</i>.
+    </p>
+
+    <!--
+    <b> is used to convey meaning traditionally conveyed by bold text eg keywords, product names, warning text...
+        Here we use <b> to make bold the term 'semantic' when it it is used in the definition.
+    -->
+    <dl>
+      <dt>Semantic HTML</dt>
+      <dd>
+        Use the elements based on their <b>semantic</b> meaning, not their
+        appearance.
+      </dd>
+    </dl>
+
+    <!--
+        <u> is used to convey meaning traditionally conveyed by underlining eg links, misspelled words, proper nouns...
+
+        People strongly associate underlining with hyperlinks. Therefore,it is best to only underline links.
+    -->
+    <p>
+      Someday, I will learn how to <u class="spelling-error">spel</u> better.
+    </p>
+  </body>
+</html>
