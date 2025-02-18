@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    Sometimes attributes are written without values. This is acceptable. These are called boolean attributes.
+
+    When a boolean attribute is written without a value, or with any value, like 'false', the boolean attribute is always true.
+    If the attribute is not written in an html tag, the boolean attribute is false.
+
+    Consider the disabled attribute that you can assign to form input elements.
+    We use this to disable the form input elements so the user cannot make entries
+    Disabled elements typically have a greyed out appearance.
+    -->
+
+    <input type="text" disabled="disabled" />
+
+    <!-- Shorthand for the above to prevent user from entering text into the input box -->
+    <input type="text" disabled />
+
+    <!--
+     No disabled attribute so text input is allowed
+    -->
+    <input type="text" />
+  </body>
+</html>

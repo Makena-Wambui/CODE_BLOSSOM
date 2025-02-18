@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    Sometimes attribute values are written without quotes.
+
+    The element below, <a> is called an amchor.
+        Anchors enclose text and turn them into links
+        href attribute specifies the web address the link points to.
+        If you are only going to have the href attribute you can write the element like this:
+    -->
+    <a href="https://www.mozilla.org">My favorite website</a>
+
+    <!--
+    The anchor can also have a title attribute - a description of the linked page.
+
+    We get errors if we add the title element the same way we added the href attribute above.
+    <a href=https://www.mozilla.org title=The Mozilla Website>My favorite website</a>
+
+    The browser mistakes this as three attributes: title with a value of The, and two boolean attributes, Mozilla and Website.
+    You can hover over the link to view the title text.
+    Always include attribute quotes to avoid this error. It also results in more readable code.
+    -->
+
+    <a href="https://www.mozilla.org" title="The Mozilla Website"
+      >My favorite Website</a
+    >
+  </body>
+</html>

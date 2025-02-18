@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Whitespace in HTML</title>
+  </head>
+
+  <body>
+    <!--
+        These two lines of code are equivalent:
+
+        No matter how much whitespace you use inside an HTML element content(space characters and line breaks),
+        the HTML Parser reduces each seqeunce of whitespace to a single whitesapce when rendering the code.
+        We only use whitespace for the purposes of readability.
+        -->
+
+    <p id="noWhitespace">Dogs are silly.</p>
+    <p id="whitespace">Dogs 
+        are 
+    silly.</p>
+
+    <script>
+      /*
+      Accessing the innerHTML of elements from JS will keep all the whitespaces intact.
+      This may return unexpected results if the whitespace is trimmed by the browser
+      */
+     console.log(document.getElementById('noWhitespace').innerHTML);
+     console.log(document.getElementById('whitespace').innerHTML);
+
+
+    </script>
+  </body>
+</html>

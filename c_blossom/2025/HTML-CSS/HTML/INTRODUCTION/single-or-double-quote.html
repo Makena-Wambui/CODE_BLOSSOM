@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    Both double and single quotes are acceptable around attribute values.
+    It is simply a matter of preference and own style.
+    Both anchors below are equivalent
+    -->
+    <a href="https://www.mozilla.org">The HomePage</a>
+    <a href="https://www.mozilla.org">The HomePage</a>
+
+    <!--
+    Dont mix double quotes and single quotes in the same attribute value.
+
+     <a href="https://www.mozilla.org'>My favorite website</a>
+
+     If you choose one type of quote, you can use the other type of quote inside the attribute value.
+    -->
+
+    <a
+      href="https://portfolio-three-lilac-71.vercel.app/"
+      title="Isn't this website amazing?"
+      >The best portfolio website</a
+    >
+
+    <!--
+    To use quote marks inside quote marks of the same type, for example, double quotes inside double quotes, you can use character references. 
+
+    For instance, this results in an error:
+    
+    -->
+    <a href="https://portfolio-three-lilac-71.vercel.app/" title="Isn"t this website amazing">The best portfolio website</a> <!-- Error -->
+
+    <!--
+    To fix the error, use character references:
+    -->
+    <a href="https://portfolio-three-lilac-71.vercel.app/" title="Isn&quot;t this website amazing">The best portfolio website</a>
+
+    <a href="https://portfolio-three-lilac-71.vercel.app/" title="An "Interesting" Website">The best portfolio website</a> <!-- Error -->
+    <a href="https://portfolio-three-lilac-71.vercel.app/" title="An &quot;Interesting&quot; Website">The best portfolio website</a> 
+  </body>
+</html>
