@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The cite attribute and the <cite> element</title>
+  </head>
+  <body>
+    <!--
+
+    The content of the cite attribute may look useful, but browsers, screen readers, etc do not do much with it.
+
+    There is no way to get the browser to display the contents of cite attribute, unless via JS or CSS.
+
+    You can use a <cite> element, but it contains the title of the resource being quoted eg the name of a book, a movie, a song, etc.
+        You could link the text inside cite element to the source of the quote.
+
+    Citations are styled in italic font by default.
+  -->
+
+    <p>
+      According to the
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+        ><cite>MDN Blockquote page</cite></a
+      >:
+    </p>
+    <blockquote
+      cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+    >
+      <p>
+        The <strong>HTML <code>&lt;blockquote&gt;</code> element</strong>, (or
+        the <em>Block Quotation Element</em>), indicates that the enclosed text
+        is an extended quotation.
+      </p>
+    </blockquote>
+
+    <p>
+      The <strong>quote element</strong> - &lt;q&gt; element - is
+      <q
+        cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+        >intended for short quotations that do not need paragraph breaks</q
+      >
+      according to
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+        ><cite>the MDN q page</cite></a
+      >.
+    </p>
+  </body>
+</html>
