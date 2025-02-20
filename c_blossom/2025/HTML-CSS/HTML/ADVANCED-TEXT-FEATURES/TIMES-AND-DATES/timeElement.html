@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The <time> element</title>
+  </head>
+  <body>
+    <p>This element is used for marking up times and dates.</p>
+
+    <p><time datetime="2016-02-20" id="time">20 February 2016</time></p>
+    <!-- Standard simple date-->
+
+    <p><time datetime="2016-02">February 2016</time></p>
+    <!-- Just year and month-->
+
+    <p><time datetime="02-20">20 February</time></p>
+    <!-- Just month and day -->
+
+    <p><time datetime="21:32">21:32</time></p>
+    <!-- Just time, hours and minutes -->
+
+    <p><time datetime="21:32:45.569">21:32:45.569</time></p>
+    <!-- hours, minutes, seconds and miliseconds -->
+
+    <p><time datetime="2016-02-20T21:30">9.30pm, 20 February 2016</time></p>
+    <!-- date and time -->
+    <p>
+      <time datetime="2016-02-20T21:30+01:00"
+        >9.30pm, 20 February 2016 is 10.30pm in France</time
+      >
+    </p>
+    <!-- date and time with timezone -->
+    <p><time datetime="2025-W03">The third week of 2025</time></p>
+    <!--a specific week in a specific year-->
+
+    <!--
+        Ok so why is this useful.
+
+        Human write dates in different ways.
+        For example, the date above could be written as 20th February 2016 or February 20th, 2016.
+        The <time> element allows you to write the date in a machine-readable format, while still displaying it in a human-readable format.
+    -->
+
+    <script>
+      const time = document.getElementById("time");
+      console.log(time.textContent);
+      console.log(time.dateTime);
+    </script>
+  </body>
+</html>
