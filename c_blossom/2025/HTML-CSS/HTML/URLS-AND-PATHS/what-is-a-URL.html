@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URLS and File Paths</title>
+  </head>
+  <body>
+    <dl>
+      <dt>URL - Uniform Resource Locator.</dt>
+      <dd>
+        A string of text that defines where something is located on the Web. For
+        instance:
+        <ul>
+          <li>
+            Mozilla's English homepage is located at the URL
+            <a href="https://www.mozilla.org/en-US/"
+              >https://www.mozilla.org/en-US/</a
+            >.
+          </li>
+          <li>
+            The URL for Google's homepage is
+            <a href="https://www.google.com">https://www.google.com</a>.
+          </li>
+        </ul>
+      </dd>
+    </dl>
+
+    <p>
+      URLS use paths to find files.<br />
+      Paths specify where the file you are looking for is found in the file
+      system.
+    </p>
+
+    <!--
+        Let us consider the following directory structure:
+         Say you have a directory called creating-hyperlinks. This is our root directory.
+            When working locally with a website, you will have one directory that contains the entire website. This directory is called the root directory.
+    
+        Inside the root directory we have the following:
+            File 1 - index.html; which would be our homepage or landing page in a real website.
+                        A landing page is a web page that serves as the entry point to a website or a particular section of a website.
+            File 2 - contacts.html
+            
+            Two directories:
+                Directory 1 - pdfs, which has a single pdf file - project-brief.pdf
+                Directory 2 - projects, which has an index.html file. This would be the main landing page for project related information.
+                NB: you can have two different index.html files for the same project as long as they are in different filesystem locations.
+
+
+            SAME DIRECTORY.
+                You want to include a hyperlink inside the top level index.html that points to contacts.html.
+                You just specify the filename you want to link to, because it is in the same directory as the current file
+
+            MOVING DOWN TO SUBDIRECTORIES:
+              If you wanted to include a hyperlink in the top level index.html that points to projects/index.html, you would specify the path to the file you want to link to.
+              path = projects/index.html
+
+            MOVING UP TO PARENT DIRECTORIES:
+               If you are in projects/index.html, and want to include a hyperlink to pdfs/project=brief.pdf,
+               you would have to go up a directory level to the root directory, then down to the pdfs directory.
+               To go up a directory, use ../ so our URL would be ../pdfs/project-brief.pdf
+            -->
+  </body>
+</html>
