@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      You can use <code>width</code> and <code>height</code> attributes of the
+      <code>img</code> element<br />
+      to specify the width and height of your image.<br />
+      Provide their values as integers without a unit;<br />
+      They represent the image's width and height in pixels.
+    </p>
+
+    <p><img src="images/dinosaur.jpg" alt="A Massive T-Rex" /></p>
+
+    <p>
+      <img
+        src="images/dinosaur.jpg"
+        alt="A Massive T-Rex"
+        width="400"
+        height="300"
+      />
+    </p>
+    <!--Suppose we have some text after the image like this:-->
+    <p>
+      Why do we need to specify width and height?<br />
+
+      The HTML for your page and the image are separate resources that are
+      fetched by the browser as separate HTTPS requests.<br />
+      The browser starts to display the HTML to the user as soon as it receives
+      it. <br />
+      If the images have not yet been received, which is often the case,<br />
+      as image files are often larger than HTML files,<br />
+      the browser will only render the HTML, and will update the page with the
+      image once the image is received.<br />
+    </p>
+    <p>
+      Once the image is loaded, the browser adds the image to the page.<br />
+      The image takes up space, so the browser has to move the text down the
+      page<br />
+      to accomodate the image above it.
+    </p>
+
+    <p>
+      Moving the text like this is extremely distracting, especially if the user
+      had already started reading.
+    </p>
+
+    <p>
+      If you specify the size of the image in your HTML,<br />
+      using width and height attributes, then the browser knows,before it even
+      downloads it,<br />
+      the space it has to allow for it.<br />
+
+      So when the image is downloaded, the browser does not have to move the
+      surrounding content.
+    </p>
+
+    <blockquote>
+      <p>
+        But down there it would be dark now, and not the lovely lighted aquarium
+        she imagined it to be during the daylight hours, eddying with schools of
+        tiny, delicate animals floating and dancing slowly to their own serene
+        currents and creating the look of a living painting. That was wrong, in
+        any case. The ocean was different from an aquarium, which was an
+        artificial environment. The ocean was a world. And a world is not art.
+        Dorothy thought about the living things that moved in that world: large,
+        ruthless and hungry. Like us up here.
+      </p>
+
+      <footer>Rachel Ingalls, <cite>Mrs.Caliban</cite></footer>
+    </blockquote>
+  </body>
+</html>

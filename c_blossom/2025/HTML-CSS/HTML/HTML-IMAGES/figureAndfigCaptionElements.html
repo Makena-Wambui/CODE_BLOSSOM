@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figure and figcaption elements</title>
+  </head>
+  <body>
+    <p>
+      These 2 elements provide a semantic container for figures, and to clearly
+      link the figure to the caption.
+    </p>
+
+    <figure>
+      <img
+        src="images/dinosaur.jpg"
+        alt="A freaking huge T-Rex. Mouth wide open to display long teeth"
+        width="400"
+        height="200"
+      />
+
+      <figcaption>A huge T-Rex</figcaption>
+    </figure>
+    <!--
+    A figcaption tells browsers and other assistive technology that the caption describes the other content of the figure element
+
+    Captions and alt text have distinct roles.
+
+    Captions benefit even the  people who who see the image.
+    alt text provides the same functionality as an absent image 
+    Thus they should not say the same thing as they both appear when the image is absent.
+    -->
+
+    <figure>
+      <img
+        src="https://www.akc.org/wp-content/uploads/2017/11/Longhaired-Dachshund-standing-outdoors.jpg"
+        alt="wiener-dog"
+      />
+
+      <figcaption>My beautiful daschund, Rosie</figcaption>
+    </figure>
+
+    <figure>
+      <figcaption>
+        This is how you target elements by id in Javascript
+      </figcaption>
+      <pre><code>
+        document.getElementById("id").innerHTML = "Hello";
+    </code></pre>
+    </figure>
+  </body>
+</html>

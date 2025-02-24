@@ -1,0 +1,9 @@
+p {
+  background-image: url("../images/dinosaur.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 200px;
+  color: black; /* Optional: to make text readable */
+}
