@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using multiple source formats to improve compatibility.</title>
+  </head>
+  <body>
+    <!--
+        We have taken the src attribute out of the actual video tag
+        Instead we have used separate <source> elements that point to their own sources.
+
+        The browser will go through the source elements, and play the first one it can support
+        Including WEBM and MP4 sources should be enough to play your video on most platforms and browsers nowadays.
+
+        Type attribute: optional but advisable that you include it.
+            It contains the MIME type of the file that <source> points to.
+            Browsers can use type to immediately skip over videos they do not recognize.
+            If type is not included,browsers will load and try to play each file till they find one that works.
+                This obviously takes time, and is an unnecessary use of resources.
+    -->
+    <video controls>
+      <source src="cat-swim.avif" type="video/avif" />
+      <source src="cat-swim.mp4" type="video/mp4" />
+
+      <p>
+        Your browser does not support this video. Here is a link to the
+        <a href="cat-swim.avif">video</a>
+        instead.
+      </p>
+    </video>
+  </body>
+</html>

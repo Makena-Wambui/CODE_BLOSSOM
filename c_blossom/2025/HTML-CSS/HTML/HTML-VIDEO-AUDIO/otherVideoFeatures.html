@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Other Video Features</title>
+  </head>
+  <body>
+    <!--
+        Use width and height attributes to control the video size, or use CSS.
+        Whichever one you choose, videos mantain their native width-height ratio, also known as aspect ratio.
+        If aspect ratio is not mantained by the sizes you set, the video will grow to fill the space horizontally, then the
+        unfilled space will just be given a solid bg color by default.
+
+        autoplay so that the video or audio starts playing right away while the rest of the page is loading.
+        Advised not to use this, as it can be really annoying.
+
+        loop makes video or audio start playing again whenever it finishes.
+        only use when necessary.
+
+        muted causes the media to play with the sound off by default.
+
+        poster is the url of an image which will be displayed before the video is played. image is used as a splash screen or advertisng screen
+
+        preload - for buffering large media files.
+             none - do not buffer the media file.
+             auto - buffer the media file
+             metadata - buffer only the metadata of the file.
+    -->
+
+    <!--
+    Note if autoplay is included, then you will not be able to see the poster.
+    -->
+    <video
+      src="cat-swim.avif"
+      controls
+      width="300"
+      height="150"
+      loop
+      muted
+      preload="auto"
+      poster="poster.jpeg"
+    >
+      <p>
+        You browser does not support this video. You can watch the
+        <a href="cat-swim.avif">video</a> here.
+      </p>
+    </video>
+  </body>
+</html>

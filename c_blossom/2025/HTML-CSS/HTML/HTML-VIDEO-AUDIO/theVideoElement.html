@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The <video> Element</title>
+  </head>
+  <body>
+    <!--
+        The video element allows you to embed a video easily.
+
+        src(source) attribute to indicate the path to the video.
+
+        controls attribute;
+            users must be able to control video and audio playback.
+            Use the controls attribute to include the browser's own control interface, or build your own interface using a JS API.
+            At a minimum, the interface must include a way to stop and start the media, and to adjust the volume.
+
+        The paragraph inside the video tags:
+            This is the fallback content.
+            Will be dispalyed if the browser accessing the page does not support the video element.
+            This provides a fallback for older browsers.
+            It can be anything you like.
+            In our case we have provided a link to the video so the user can access it no matter what browser they use.
+    -->
+    <div>
+      <video src="rabbit320.avif" controls>
+        <p>
+          Your browser does not support HTML video.Here is a link to the
+          <a href="rabbit320.avif">video</a> instead.
+        </p>
+      </video>
+    </div>
+    <div>
+      <video src="cat-swim.avif" controls>
+        <p>
+          This video is not supported by your browser. You can
+          <a href="cat-swim.avif">watch it</a> here.
+        </p>
+      </video>
+    </div>
+  </body>
+</html>

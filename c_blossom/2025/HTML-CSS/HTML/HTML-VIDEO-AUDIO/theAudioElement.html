@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><audio> element</title>
+  </head>
+  <body>
+    <!--
+        The audio element works just like the video element, with only a few differences.
+        Takes up less space than a video player, as there is no visual component.
+    -->
+
+    <audio controls>
+      <source src="sample-audio.mp3" type="audio/mp3" />
+      <source src="sample-audio.ogg" type="audio/ogg" />
+
+      <p>
+        Your browser does not support this audio file. Here is a
+        <a href="sample-audio.mp3">link</a> to the audio instead.
+      </p>
+    </audio>
+  </body>
+</html>
