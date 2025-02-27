@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Adding more structure with <thead>, <tbody> and <tfoot> elements
+    </title>
+  </head>
+  <body>
+    <!--
+        Your table might get a bit more complex in structure.
+        It is useful to give them more structural definition.
+        One way to do this is by using <thead>, <tbody> and <tfoot> elements.
+            They allow you to markup the header, body and footer sections of a table.
+    
+    These elements do not necessarily make the table more accessible to screen reader users.
+    They dont add any visual enhancements to the table on their own.
+    However, they are very useful for applying styling and layout enhancements via CSS, which can make the table more accessible.
+
+    Use them in the following order:
+     1. <thead> must wrap the part of the table that is the header
+          this is usually the first row with the column headings.
+          if using col/colgroup elements, the table header should come right after them.
+
+    2. <tbody> must wrap the main part of the table content, that is not the header or footer.
+          this is usually the rows with the data.
+          Note: tbody is always included in every table implicitly, even if you don't write it in the HTML code.
+          So why should you include it?
+           It gives you more control over the table's structure and styling.
+
+    3. <tfoot> must wrap the part of the table that is the footer.
+        For example, this might be a final row with totals or summary information.
+    -->
+  </body>
+</html>
