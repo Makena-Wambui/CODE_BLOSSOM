@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+      The 'name' attributes for each set of radio buttons have to contain the same value,
+      to associate them together as one set.
+      If the name attributes contain different values, then they will effectively be different sets of radio buttons,
+      and will have different values on submission to the server.
+
+      Include a 'value' attribute that contains the value to be submitted to the server when the radio button is selected.
+      name/value pairs are submitted to the server when the form is submitted.
+      So for our example, the server will receive a name/value pair of 'hotel=economy' if the 'economy' radio button is selected.
+
+      The label for each radio button should describe that particlar value choice, rather than the overall group of radio buttons.
+      To describe the overall value choice, wrap it in a fieldset element.
+      This element takes a legend element as a child.
+      The legend contains the overall description of the radio button group.
+
+      The checked attribute has been applied to the first radio button,
+      so that when the page first loads that button is selected by default.
+      This shows that this hotel room type section is required.
+      One option will always be selected by default.
+      To deselect the default selection, the user must select another option.
+    -->
+    <form action="./hotel-room-choice" method="post">
+      <fieldset>
+        <legend>Choose your desired hotel room:</legend>
+        <div>
+          <input
+            type="radio"
+            name="hotel"
+            id="economy"
+            value="economy"
+            checked
+          />
+          <label for="economy">Economy @ 20$ per night</label>
+
+          <input type="radio" name="hotel" id="business" value="business" />
+          <label for="business">Business @ 100$ per night</label>
+
+          <input
+            type="radio"
+            name="hotel"
+            id="luxury"
+            value="luxury"
+            disabled
+          />
+          <label for="luxury">Luxury suite @ 500$ per night</label>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Label Elements</title>
+  </head>
+  <body>
+    <!--
+    Label elements provide identifying labels associated with form controls,
+    that describe the data that should be entered into them.
+
+    You can put whatever text content you like in label elements.
+    But labels should accurately describe what data the associated form control expects.
+
+    You create an association between the label and the form control by giving the conrol an id attribute,
+    then you give the label a for attribute whose value is the same as the value of the control's id attribute.
+    -->
+
+    <!--
+       This is an example of an explicit form label.
+       The association between label and control is made explicitly via the for and id attributes.
+    -->
+    <label for="name">Name (required):</label>
+    <input type="text" name="name" id="name" required />
+
+    <!--
+      You can implement an implicit form label by nesting the control inside the label element.
+      You no longer need the for and id attributes to associate the label and control.
+    -->
+
+    <label>
+      Email (required):
+      <input type="email" name="email" required />
+    </label>
+  </body>
+</html>

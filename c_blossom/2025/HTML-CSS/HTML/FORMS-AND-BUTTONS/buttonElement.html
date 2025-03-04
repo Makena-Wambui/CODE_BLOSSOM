@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons in Forms</title>
+  </head>
+  <body>
+    <!--
+        The default behavior of a button in a form element is to submit the form,
+        unless form submission is blocked by client side form validation, due to invalid input.
+
+        You can specify a button's behavior using the button's type attribute.
+        The type attribute can have one of the following values:
+        - submit: To explicitly declare that a button should behave like a submit button.
+                Not necessary to decalre this unless you have other buttons inside your form,
+                and you want to make it clear which button should submit the form.
+
+        - reset: creates a reset button.
+                Immediately deletes all data out of the form, resetting it to its initial state.
+                These type of buttons are more annoying than useful, so avoid using them.
+        - button: creates a normal button like the ones used outside of forms.
+                By default they do nothing.
+                JS is needed to give them functionality.
+    -->
+
+    <form action="https://example.com" method="post">
+      <h2>Unsubscribe from all emails</h2>
+
+      <p>
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" id="name" required />
+      </p>
+
+      <p>
+        <label
+          >Enter your email:
+          <input type="email" name="email" required />
+        </label>
+      </p>
+
+      <p><button type="submit">Unsubscribe</button></p>
+
+      <p><button type="reset">Clear All</button></p>
+
+      <p><button type="button">I am just a normal button</button></p>
+    </form>
+  </body>
+</html>
