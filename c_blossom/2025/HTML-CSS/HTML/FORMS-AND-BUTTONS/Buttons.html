@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+  </head>
+  <body>
+    <!--
+        The simplest button
+
+        Our lonesome button will not do anything useful on its own.
+        In order for it to do something useful, we must put it inside a form, or add some Javascript.
+    -->
+    <button>Press Me</button>
+
+    <script>
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", () => {
+        button.textContent = "YOU CLICKED ME!! ❤️";
+
+        setTimeout(() => (button.textContent = "Press Me"), 1000);
+      });
+    </script>
+  </body>
+</html>

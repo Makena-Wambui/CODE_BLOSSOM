@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in HTML</title>
+  </head>
+  <body>
+    <!--
+        A basic form contains three things:
+           1. A form element.
+              Which wraps all of the other form content.
+              Any form controls inside the <form></form> tags are part of the form, 
+              and their data is included when the form is submitted.
+
+            2. One or more pairs each consisting of a label element,
+            and a form control element, usually an input element, but there are other types of form controls such as select element.
+            Form control element allows the user to choose or enter some data that will be sent to the server when the form is submitted.
+            The label element provides an identifying label associated with the form control describing the data that should be entered.
+
+            3. A button element for submitting the form.
+
+            Our example below is used to ask for a user's name and email to sign them up for a newsletter.
+
+            The form element attributes:
+                1. action
+                    a path to the page we want to send the submitted form data to, for processing.
+                2. method: 
+                     the data transmission method we want to use to send the form data to the server.
+                     'get' value causes the data to be sent as parameters attached to the end of the URL.
+
+            The input elements:
+                represent the different data items entered into the form.
+
+                Attributes:
+                   type - specifies the type of input element to display.
+                         - specifies the type of form control to create
+                         there are many different types of form controls from simple text fields of different types,
+                         to radio buttons, checkboxes, and more.
+                         type text renders a basic text field that can accept any value.
+
+                         name - the name of the data item.
+                         On form submission, the data is sent as name/value pairs.
+                         See this: http://localhost:5500/c_blossom/2025/HTML-CSS/HTML/FORMS-AND-BUTTONS/submit-page?name=emma&email=emma%40gmail.com
+                         So as for the name - value pairs sent to the server: the name is equal to the value of the name attribute,
+                         and the value is equal to the data entered in the field.
+
+                    id attribute - this is an id that can be used to identify the element.
+                                    in our case, it is used to associate the form control with its label.
+
+                    required attribute - this attribute makes the field required.
+                                         The form cannot be submitted unless the required fields are filled in.
+                                         Dont set on optional fields.
+
+
+                    NB: Some input types don't get their value from text entered into the field.
+                        input type="color" renders a color picker widget that you choose a color from.
+                        input type="radio" renders a radio button that can be selected, or deselected.
+    -->
+    <section>
+      <form action="./submit-page" method="get">
+        <h2>Subscribe to our newsletter</h2>
+
+        <p>
+          <label for="name">Name (required):</label>
+          <input type="text" name="name" id="name" value="Bob" required />
+        </p>
+
+        <p>
+          <label for="email">Email (required):</label>
+          <input type="email" name="email" id="email" required />
+        </p>
+
+        <!--
+      <p>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="gender" value="Male Female" />
+      </p>
+      -->
+
+        <p>
+          <label for="color">Favourite Color</label>
+          <input type="color" name="color" id="color" value="blue" />
+        </p>
+
+        <p>
+          <button>Sign Me Up!</button>
+        </p>
+      </form>
+    </section>
+
+    <section>
+      <!--
+      Input element of type password
+      -->
+
+      <form action="./sign-in-page" method="get">
+        <p>
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" required />
+        </p>
+
+        <p>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" required />
+        </p>
+
+        <p>
+          <button>Sign In</button>
+        </p>
+      </form>
+    </section>
+  </body>
+</html>
