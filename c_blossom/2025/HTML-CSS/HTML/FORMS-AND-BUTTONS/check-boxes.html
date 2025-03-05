@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms: checkboxes</title>
+  </head>
+  <body>
+    <!--
+    This is implemented using input type="checkbox" controls.
+    
+    Unlike radio buttons, checkboxes allow multiple selections.
+
+    Radio buttons and check boxes are implemented in a very similar way.
+    Check boxes can also take checked attributes so that they are pre selected when the page loads.
+
+    They also behave in a similar fashion.
+    Except that radio buttons allow you to select 0 or one option from a group of options.
+    While checkboxes allow you to select 0 or more options from a group of options.
+    Also while radio buttons have the same value for the name attribute, check boxes have different name values.
+    They also are generally not given value attributes.
+    This means check boxes represent different data values.
+    While a radio button set represents the same data value.
+    On submission, each value is submitted with a value of on if the checkbox is checked.
+    If the checkbox is not checked, the value is not submitted.
+    If you checked for example yoga and kungfu, the name/value pairs submitted to the server would be yoga=on and kungfu=on.
+  -->
+    <form>
+      <fieldset>
+        <legend>What class will you be taking?</legend>
+        <div>
+          <label for="yoga">Yoga class</label>
+          <input type="checkbox" name="yoga" id="yoga" checked />
+
+          <label for="kundalini">Kundalini Awakening</label>
+          <input type="checkbox" name="kundalini" id="kundalini" />
+
+          <label for="kungfu">Kungfu</label>
+          <input type="checkbox" name="kungfu" id="kungfu" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

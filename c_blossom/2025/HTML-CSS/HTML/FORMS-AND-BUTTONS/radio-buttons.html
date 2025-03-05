@@ -7,6 +7,8 @@
   </head>
   <body>
     <!--
+
+      You can only select one radio button from a group of radio buttons.
       The 'name' attributes for each set of radio buttons have to contain the same value,
       to associate them together as one set.
       If the name attributes contain different values, then they will effectively be different sets of radio buttons,
@@ -26,6 +28,13 @@
       This shows that this hotel room type section is required.
       One option will always be selected by default.
       To deselect the default selection, the user must select another option.
+
+      The disabled attribute causes the rendered control to be grayed out and unselectable.
+      Useful in situations where an option is usually available, just not right now.
+      In our case, luxury rooms are not available.
+      disabled attribute can be set on any form control, including buttons.
+      fieldset elements also accept the disabled attribute.
+      this will cause all form controls inside it to be disabled.
     -->
     <form action="./hotel-room-choice" method="post">
       <fieldset>
@@ -53,6 +62,8 @@
           <label for="luxury">Luxury suite @ 500$ per night</label>
         </div>
       </fieldset>
+
+      <p><button disabled>Submit</button></p>
     </form>
   </body>
 </html>
