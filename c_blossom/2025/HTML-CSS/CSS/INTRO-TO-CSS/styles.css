@@ -1,0 +1,44 @@
+/* Targeting multiple selectors at the same time. */
+p,
+li {
+  color: gold;
+}
+
+/* targeting all elements with the class of special */
+.special {
+  color: red;
+  font-style: italic;
+}
+
+/* A descendant combinator selector */
+li em {
+  color: teal;
+}
+
+p span {
+  color: darkmagenta;
+}
+
+/* Using a next-sibling combinator selector */
+h1 + p {
+  font-size: 200%;
+}
+
+h2 + p {
+  font-size: 150%;
+}
+
+/* styling unvisited links */
+a:link {
+  color: tan;
+}
+
+/* styling visited links */
+a:visited {
+  color: palevioletred;
+}
+
+/* removing the underline when a user hovers over a link */
+a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,20 @@
+/* select any span that is ta child of p, that is a child of article */
+article p span {
+  color: coral;
+}
+
+/* select any p that comes directly after ul, which comes directly after h2 */
+h2 + ul + p {
+  color: chartreuse;
+}
+
+h1 + p .special {
+  color: blueviolet;
+  background-color: brown;
+  padding: 5px;
+}
+
+article h2 + p {
+  color: darkorange;
+  padding: 10px;
+}

@@ -1,0 +1,15 @@
+/*You might decide to style the main heading on your page as large red text */
+h1 {
+  color: red;
+  font-size: 2.5em;
+}
+
+p {
+  color: aqua;
+  padding: 5px;
+  background-color: midnightblue;
+}
+
+h2 {
+  color: burlywood;
+}
