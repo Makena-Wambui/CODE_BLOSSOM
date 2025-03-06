@@ -1,0 +1,18 @@
+/*
+@rules provide instructions for how CSS should behave.
+
+most common is @media, used to create media queries, which use conditional logic for applying CSS styling.
+
+In this stylesheet, we define a default pink background for the body element
+A media query follows that sets a blue background on the body element if the browser viewport is wider than 30em
+*/
+
+body {
+  background-color: pink;
+}
+
+@media (min-width: 30em) {
+  body {
+    background-color: blue;
+  }
+}

@@ -1,0 +1,26 @@
+/*
+shorthand properties are used to set multiple properties with a single declaration.
+
+For example, this one line of code is equivalent to 4 lines of code:
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+*/
+
+p {
+  padding: 10px 20px 10px 50px;
+}
+
+/* This could have been written as: 
+    background-color: yellowgreen;
+    background-image: url('nice-bg.jpg');
+    background-position: 10px 10px;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+
+*/
+
+body {
+  background: yellowgreen url(nice-bg.jpg) 10px 10px repeat-x fixed;
+}
