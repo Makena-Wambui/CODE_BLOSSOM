@@ -13,3 +13,11 @@ body {
 .highlight {
   background: yellow;
 }
+
+span.highlight {
+  background: red;
+}
+
+h1.highlight {
+  background: green;
+}
