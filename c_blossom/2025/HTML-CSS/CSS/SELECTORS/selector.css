@@ -1,0 +1,19 @@
+/*
+A selector is the first part of a CSS rule.
+
+It is a pattern of elements and terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them.
+
+The element(s) that a selector matches are referred to as the subject of the selector.
+
+Type selectors also known as element or tag name selectors because they select HTML elements or tags in your document.
+
+*/
+
+h1 {
+  color: blueviolet;
+  background: yellow;
+}
+
+p {
+  color: tomato;
+}

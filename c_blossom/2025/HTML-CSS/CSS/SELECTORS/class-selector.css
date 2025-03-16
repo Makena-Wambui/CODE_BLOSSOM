@@ -1,0 +1,15 @@
+/*
+
+class selectors are case sensitive.
+start with a dot(.) character.
+selects everything in the document with that class applied to it.
+
+*/
+
+body {
+  font-family: sans-serif;
+}
+
+.highlight {
+  background: yellow;
+}
