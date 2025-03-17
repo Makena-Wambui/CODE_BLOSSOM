@@ -1,0 +1,40 @@
+/*
+Same CSS for an h1 and also a class of .special, can be written as two separate CSS rules.
+
+
+h1 {
+  color: brown;
+}
+
+.special {
+  color: brown;
+}
+  */
+
+/*
+Or you could combine these individual selectors into a selector list, separated by a comma.
+
+If any selector in a selector list is syntactically invalid,the whole CSS rule is ignored.
+
+For example, the h1 would still be styled.
+
+But the invalid class selector rule will be ignored.
+
+h1 {
+    color: blue;
+}
+
+..special {
+    color: blue;
+}
+
+When combined in a selector list, neither the h1 nor the class will be styled as the entire rule is deemed invalid.
+
+h1, ..special {
+    color: blue;
+}
+*/
+h1,
+.special {
+  color: brown;
+}
