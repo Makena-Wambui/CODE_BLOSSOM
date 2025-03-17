@@ -1,0 +1,38 @@
+/*
+We use the universal selector to remove all margins on all elements.
+The browser's default styling spaces out headings and paragraphs with margins, everything is close together.
+*/
+
+body {
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+/*
+
+We can use the universal selector to make our selectors easier to read and more obvious in terms of what they re doing.
+
+For ex, if we wanted to select any descendant elements of an article element that are the first child of their parent,
+including direct childen, and make all of them bold,we can use the :first-child pseudo class.
+
+
+article :first-child {
+  font-weight: bold;
+}
+
+
+The above selector could be confused with article:first-child, which selects any article element, that is the first child of another element.
+
+To avoid this, we can add * to the :first-child pseudo class so it is more obvious what the selector is doing.
+That is, it is selecting any element that is the first child of the article element, or
+the first child of any descendant element of the article element.
+
+article *:first-child {
+        font-weight: bold;
+}
+
+Both do the same thing,but the second one is more readable.
+*/
