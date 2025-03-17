@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+}
+
+/* 
+Select all  <li> elements with a class attribute.
+Will select all list items except the first because it doesn't have a class attribute.
+*/
+li[class] {
+  font-size: 120%;
+}
+
+/* 
+Select all  <li> elements with a class attribute that is exactly equal to "a".
+Will select the second list item because it has a class attribute equal to "a".
+*/
+li[class="a"] {
+  background: yellow;
+}
+
+/* 
+Select all  <li> elements with a class attribute that contains the word "a" or the class attribute has a list of space separated values and one of them is "a".
+*/
+li[class~="a"] {
+  color: red;
+}

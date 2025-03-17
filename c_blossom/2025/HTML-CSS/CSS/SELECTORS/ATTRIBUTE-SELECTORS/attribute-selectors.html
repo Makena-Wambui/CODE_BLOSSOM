@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Selectors</title>
+    <link rel="stylesheet" href="attribute-selectors.css" type="text/css" />
+  </head>
+  <body>
+    <!--
+        Attributes provide additional information about an element that is being marked up.
+
+        Attribute selectors are used to target elements with specific attributes.
+
+        The first type: Presence and Value Selectors.
+            These enable the selection of an element based on the presence of an attribute alone - for example href;
+            or the presence of an attribute with a specific value - for example href="https://www.google.com".
+
+        Examples of presence and value selectors:
+            1. [*attr*] - a[title] - matches all <a> elements with a title attribute (regardless of its value). the attribute is in the square brackets.
+
+            2. [*attr*=*value*] - a[href="https://www.google.com"] - matches all <a> elements with an href attribute whose value is exactly "https://www.google.com".
+
+            3. [*attr*~=*value*] - p[class~="special"] - match all p elements that have a class attribute whose value is exactly special or contains special as a space-separated value.
+
+            4. [*attr*|=*value*] - p[lang|="en"] - matches all p elements with a lang attribute whose value is exactly "en" or starts with "en" immediately followed by a hyphen. for example, "en-US".
+    -->
+    <h1>Attribute presence and value selectors</h1>
+
+    <ul>
+      <li>Item 1</li>
+      <li class="a">Item 2</li>
+      <li class="a b">Item 3</li>
+      <li class="ab">Item 4</li>
+    </ul>
+  </body>
+</html>
