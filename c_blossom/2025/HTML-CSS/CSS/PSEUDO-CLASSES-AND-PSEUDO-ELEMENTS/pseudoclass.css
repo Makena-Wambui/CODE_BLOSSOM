@@ -1,0 +1,22 @@
+/*
+    A pseudo class is a selector that selects elements that are in a specific state.
+      eg they are the first element of their type, or they are being hovered over by the mouse pointer.
+    
+    They act as if you had applied a class to some part of the document, but without having to add a class to the HTML
+    element.
+    They help you cut down on excess classes in your mark up
+    Help you write more flexible and maintainable CSS code
+    They are keywordsthat start with a colon;
+     eg :hover
+
+.first {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+When using pseudo-classes, this code would look like this-
+*/
+article :first-child {
+  font-size: 120%;
+  font-weight: bold;
+}
