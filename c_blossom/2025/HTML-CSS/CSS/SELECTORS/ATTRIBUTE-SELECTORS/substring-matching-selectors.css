@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+}
+
+/* Selects all li elements with a class attribute that starts with "a" */
+li[class^="a"] {
+  font-size: 120%;
+}
+
+/* Selects all li elements with a class attribute that ends with "a" */
+li[class$="a"] {
+  background: blue;
+}
+
+/* Selects all li elements with a class attribute that contains "a" anywhere */
+li[class*="a"] {
+  color: red;
+}

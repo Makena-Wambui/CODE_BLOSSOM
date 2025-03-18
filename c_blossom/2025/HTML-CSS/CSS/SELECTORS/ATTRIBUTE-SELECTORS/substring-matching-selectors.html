@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Substring Matching Selectors</title>
+    <link rel="stylesheet" href="substring-matching-selectors.css" />
+  </head>
+  <body>
+    <!--
+        Allow for more advanced matching of substrings within an attribute value.
+
+        If you had classes of box-warning and box-error, and want to match everytining that starts with box-,
+        you can use the following selector:
+        [class^='box-']
+        [class|='box']
+
+
+        [attr^='value'] - li[class^="box-"] - selects all li elements with a class attribute that starts with "box-"
+        [attr$='value'] - li[class$="box"]- selects all li elements with a class attribute that ends with "box"
+        [attr*='value'] - li[class*="box"] - selects all li elements with a class attribute that contains the substring "box", box is contained anywhere in the class attribute value.
+    -->
+
+    <h1>Attribute Substring Matching Selectors</h1>
+
+    <ul>
+      <li class="a">Item 1</li>
+      <li class="ab">Item 2</li>
+      <li class="bca">Item 3</li>
+      <li class="bcabc">Item 4</li>
+    </ul>
+  </body>
+</html>
