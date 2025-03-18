@@ -1,0 +1,33 @@
+/*
+The :focus pseudo class represents an element that has received focus, like a form input
+
+Triggered when a user clicks or taps on an element, or selects it using the keyboard's tab key
+
+*/
+
+label {
+  display: block;
+  margin-top: 2em;
+}
+
+input:focus {
+  background-color: aqua;
+}
+
+select:focus {
+  background-color: burlywood;
+}
+
+input.red-input:focus {
+  background-color: yellow;
+  color: red;
+}
+input.blue-input:focus {
+  background-color: yellow;
+  color: blue;
+}
+
+input.red-input,
+input.blue-input {
+  margin: 5px;
+}

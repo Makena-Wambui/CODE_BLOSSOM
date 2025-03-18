@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:focus</title>
+    <link rel="stylesheet" href="focus-pseudo-class.css" />
+  </head>
+  <body>
+    <form>
+      <p>Which flavor would you like to order?</p>
+
+      <label
+        >Full Name:
+        <input name="fullName" type="text" />
+      </label>
+
+      <label
+        >Flavor:
+        <select name="flavor">
+          <option value="vanilla">Vanilla</option>
+          <option value="strawberry">Strawberry</option>
+          <option value="chocolate">Chocolate</option>
+        </select>
+      </label>
+    </form>
+
+    <div>
+      <input class="red-input" value="I'll be red when focused" />
+    </div>
+    <div>
+      <input class="blue-input" value="I'll be blue when focused" />
+    </div>
+
+    <div>
+      <input value="First Input" />
+    </div>
+    <div>
+      <input value="Second Input" />
+    </div>
+  </body>
+</html>
