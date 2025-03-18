@@ -1,0 +1,29 @@
+/*
+:only-child represents an element without any siblings
+
+Same as :first-child:last-child or :nth-child(1):nth-last-child(1) but with a lower specificity.
+*/
+
+li li {
+  list-style-type: circle;
+}
+
+li:only-child {
+  color: red;
+  list-style-type: square;
+}
+
+b:only-child {
+  text-decoration: underline;
+}
+
+div:only-child {
+  border: 1px solid red;
+  color: red;
+}
+
+div {
+  display: inline-block;
+  margin: 6px;
+  outline: 1px solid;
+}

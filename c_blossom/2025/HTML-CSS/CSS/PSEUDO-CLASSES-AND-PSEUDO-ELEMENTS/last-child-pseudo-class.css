@@ -1,0 +1,27 @@
+/*
+
+    :last-child pseudo-class reperesents the last element among a group of sibling elements.
+    It is defined as a selector that matches the last child of a certain element.
+*/
+
+p {
+  font-weight: bold;
+}
+
+li:last-child {
+  border: 2px solid orange;
+}
+p:last-child {
+  color: green;
+  background-color: black;
+  padding: 5px;
+}
+
+li {
+  color: blue;
+}
+
+article li:last-child {
+  color: red;
+  border: 2px solid black;
+}

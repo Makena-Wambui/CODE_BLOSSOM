@@ -1,0 +1,9 @@
+/*
+Selecting the first line of the first <p> element inside <article>
+*/
+
+article p:first-child::first-line {
+  font-size: 30px;
+  font-weight: bold;
+  color: teal;
+}
