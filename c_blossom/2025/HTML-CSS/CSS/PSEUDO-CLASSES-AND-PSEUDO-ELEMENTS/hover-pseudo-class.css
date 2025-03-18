@@ -1,0 +1,45 @@
+/*
+The :hover css pseudo class matches when the user interacts with the element with a pointing device, but does not really activate it
+
+Generally triggered when the user hovers over an element with the cursor (mouse pointer)
+*/
+
+.joinBtn {
+  width: 10em;
+  height: 4ex;
+  color: black;
+  font-weight: bold;
+  background-color: lightblue;
+  border: 2px solid firebrick;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.joinBtn:hover {
+  background-color: lime;
+}
+
+/*
+Styles defined by the :hover pseudo class will be overridden by any subsequnt link related pseudo classes such as link, visited, active, and focus that has atleast equal specificity
+
+To style links appropriately, place the :hover rule after the :link and :visited rules but before the :active rule;
+as defined by the LVHA order - link, visited, hover, active
+*/
+
+.joinBtn:focus {
+  background-color: rebeccapurple;
+}
+
+a:link,
+a:visited {
+  font-weight: bold;
+  color: black;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: green;
+}
