@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gnerating content with ::before and ::after</title>
+    <link rel="stylesheet" href="before-and-after-pseudo.css" />
+  </head>
+  <body>
+    <!--
+        There are special pseudo-elements in CSS, ::before and ::after, that can be used to insert generated content before or after an element's content.
+        They are used along the content property to insert content into your doc using CSS.
+        In our example below, we use them to insert a string of text.
+        Doing this however is not something we do often, as this text is inaccessible to some screen readers.
+        Could also be hard to find and edit in the future.
+
+        We could use these pseudo-elements to insert icons, decorative images, or other content that is not critical to the page.
+        For example, we are insering a little arrow here that is just a visual indicator that we do not need to be read by screen readers.
+
+        They are also used to insert an empty string which can be styled to create shapes, lines, or other decorative elements.
+    -->
+    <p class="para">Content in the box in my HTML page.</p>
+
+    <p class="arrow-end">This is a paragraph with a little arrow at the end.</p>
+
+    <p class="arrow-start">
+      This is a paragraph with a little arrow at the start.
+    </p>
+
+    <p class="empty-string">The empty string comes before this.</p>
+  </body>
+</html>

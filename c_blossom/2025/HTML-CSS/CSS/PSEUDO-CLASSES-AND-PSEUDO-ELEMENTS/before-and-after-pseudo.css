@@ -1,0 +1,25 @@
+.para::before {
+  content: "Hello Alicia. ";
+}
+
+.para::after {
+  content: " How are you doing?";
+}
+
+.arrow-end::after {
+  content: "  ➥";
+}
+
+.arrow-start::before {
+  content: "➥  ";
+}
+
+.empty-string::before {
+  content: "";
+  /* set it to display: block so we can style it with a width and height */
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  border: 1px solid black;
+}
