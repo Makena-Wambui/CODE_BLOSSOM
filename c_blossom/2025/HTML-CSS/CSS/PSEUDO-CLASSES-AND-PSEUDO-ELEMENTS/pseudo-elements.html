@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo elements</title>
+    <link rel="stylesheet" href="pseudo-elements.css" />
+  </head>
+  <body>
+    <!--
+        Pseudo elements behave in a similar manner to pseudo-classes.
+        They act as if you have added a whole new HTML element into the markup, rather than applying a class to existing elements.
+        They start with two colons (::) followed by the name of the pseudo-element.
+        example - ::before, ::after, ::first-line, ::first-letter
+
+        If you wanted to select the first line of a paragraph, you could wrap it in a span element and use an element selector to style it.
+        But this would fail if the number of words you wrapped with span was longer or shorter than the parent element's width.
+        We tend to not know how many words will fit into a line of text, since this will cahnge as the screen width or font size changes, so we can't predict how many words to wrap in a span.
+        Thus HTML doesnt really help us here.
+
+        The ::first-line pseudo-element selector will do this for you.
+        It allows you to style the first line of a block-level element, such as a paragraph.
+        If the number of words increases or decreases, it doesn't matter, the ::first-line pseudo-element will always style the first line of the element.
+    -->
+
+    <article>
+      <p>
+        Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
+        onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+        Hamburger, quinoa fava bean leek soko chicory celtuce parsley jícama
+        salsify.
+      </p>
+
+      <p>
+        Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot
+        courgette tatsoi pea sprouts fava bean collard greens dandelion okra
+        wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+      </p>
+    </article>
+  </body>
+</html>
