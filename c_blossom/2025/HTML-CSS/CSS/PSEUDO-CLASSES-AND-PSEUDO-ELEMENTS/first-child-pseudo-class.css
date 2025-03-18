@@ -1,0 +1,43 @@
+/*
+    :first-child pseudo-class targets the first element in a group of sibling elements.
+*/
+
+p {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+/*
+ul li:first-child {
+  border: 3px solid yellow;
+}
+*/
+
+/*
+li:first-child {
+  border: 3px solid yellow;
+}
+*/
+
+p:first-child {
+  color: red;
+  background: black;
+  padding: 5px;
+}
+
+ul li {
+  color: blue;
+}
+
+li:first-child {
+  color: salmon;
+  font-style: italic;
+}
+
+/*
+It is valid to write pseudo-classes and elements without any element selector preceding them.
+
+You could write :first-child and the rule would apply to the first child of any element.
+
+*:first-child is the same as writing :first-child. However, you want more control over the elements that the rule applies to, so you should always include an element selector before the pseudo-class or pseudo-element.
+*/

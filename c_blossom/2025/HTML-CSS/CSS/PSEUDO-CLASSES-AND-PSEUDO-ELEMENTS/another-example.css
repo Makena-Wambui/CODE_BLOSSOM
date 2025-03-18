@@ -1,0 +1,8 @@
+article p:first-child {
+  color: royalblue;
+}
+
+li:first-child {
+  color: salmon;
+  font-style: italic;
+}
