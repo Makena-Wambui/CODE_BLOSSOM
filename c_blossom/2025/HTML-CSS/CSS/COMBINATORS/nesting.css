@@ -1,0 +1,33 @@
+p {
+  ~ img {
+  }
+}
+
+/* This is parsed by the browser as */
+p ~ img {
+}
+
+/* &nesting selector */
+p {
+  & img {
+  }
+}
+
+/* This is parsed by the browser as */
+p img {
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* the & nesting selector is not required here. But adding it helps to explicitly show that CSS nesting is being used. */
+h1 {
+  & ~ p {
+    /* parsed by the browser as h1 ~ p */
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: 2em;
+  }
+}

@@ -1,0 +1,5 @@
+ul > li[class="a"] {
+  background-color: yellow;
+  color: hotpink;
+  border-top: solid black 5px;
+}

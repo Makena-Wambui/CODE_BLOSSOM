@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>combine-selectors-and-combinators</title>
+    <link rel="stylesheet" href="combine-selectors-and-combinators.css" />
+  </head>
+  <body>
+    <!--
+        You can combine combinators with any selector to target a specific part of your document.
+
+        For ex, to select list items that have a class of 'a', and are direct children of <ul>:
+
+    -->
+
+    <ul>
+      <li>Unordered Item 1</li>
+      <li class="a">Unordered Item 2</li>
+      <li class="a">
+        Unordered Item 3
+        <ol>
+          <li>Item 1</li>
+          <li>Item 2</li>
+        </ol>
+      </li>
+    </ul>
+  </body>
+</html>
