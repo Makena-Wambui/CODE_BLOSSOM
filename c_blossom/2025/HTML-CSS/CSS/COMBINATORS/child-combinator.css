@@ -1,0 +1,10 @@
+/*
+select li elements that the direct children of ul element,
+and style them with a top border
+
+if you removed the > that made this a child combinator,
+you end up with a descendant selector, and all li elements will end up with a blue border
+*/
+ul > li {
+  border-top: solid royalblue 5px;
+}
