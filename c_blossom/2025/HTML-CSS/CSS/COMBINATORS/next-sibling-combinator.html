@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next sibling combinator</title>
+    <link rel="stylesheet" href="next-sibling-combinator.css" />
+  </head>
+  <body>
+    <!--
+    
+    Represented by (+).
+    Placed between two CSS selectors.
+    Matches only those elements matched by the second selector that come right after the element matched by the first selector.
+
+    For ex to select all <img> elements that are immediately preceded by a <p> element:
+            p + img {
+            }
+
+    -->
+
+    <article>
+      <h1>A heading</h1>
+
+      <!--
+      <h2>A subheading</h2>
+      -->
+      <p>
+        Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
+        onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+      </p>
+      <p>
+        Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot
+        courgette tatsoi pea sprouts fava bean collard greens dandelion okra
+        wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+      </p>
+    </article>
+  </body>
+</html>
