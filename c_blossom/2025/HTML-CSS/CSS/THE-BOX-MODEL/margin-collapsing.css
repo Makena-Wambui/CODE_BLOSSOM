@@ -1,0 +1,33 @@
+.container {
+  border: 5px solid blue;
+  width: 800px;
+  height: 300px;
+  margin: 50px;
+}
+
+p {
+  border: 5px solid rebeccapurple;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+.one {
+  margin-bottom: 50px;
+}
+
+/*
+.two {
+  margin-top: 30px;
+}
+*/
+
+/*
+Lets set the margin-top of the second paragraph to 0
+The margin between the two paragraphs will not change.
+It will still be 50px of the margin-bottom of the first paragraph.
+
+If you set it to -10px the margin between the two paragraphs will be 40px.
+*/
+.two {
+  margin-top: -40px;
+}

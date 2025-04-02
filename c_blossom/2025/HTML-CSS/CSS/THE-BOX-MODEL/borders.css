@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 50px;
+  padding: 30px;
+  border-top: 5px green dotted;
+  border-right: 2px black solid;
+  border-bottom: 20px blue double;
+}
+
+.box {
+  padding: 20px;
+  background-color: #ccc;
+  border: 1px solid black;
+  border-top-style: dotted;
+  border-right-width: 20px;
+  border-bottom-color: hotpink;
+  margin: 10px;
+}

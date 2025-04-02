@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margin Collapsing</title>
+    <link rel="stylesheet" href="margin-collapsing.css" />
+  </head>
+  <body>
+    <!--
+        Two positive margins will combine to become one margin.
+        The size of that margin will be equal to the larger of the two margins.
+
+        Two negative margins will collapse and the smallest of the two will be used. smallest as in furthest from 0.
+
+        If one margin is negattive and the other is positive, its value will be subtracted from the other and the result will be used.
+
+        We have two paragraphs.
+        The top paragraph has a margin-bottom of 50px
+        The other paragraph has a margin-top of 30px
+        The margins will collapse together so the actual margin between the boxes is 50px and not 80px.
+    -->
+
+    <div class="container">
+      <p class="one">I am paragraph one</p>
+      <p class="two">I am paragraph two</p>
+    </div>
+  </body>
+</html>
