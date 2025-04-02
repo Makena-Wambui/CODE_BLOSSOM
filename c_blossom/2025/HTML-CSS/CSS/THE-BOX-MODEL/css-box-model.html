@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The CSS Box Model</title>
+    <link rel="stylesheet" href="css-box-model.css" />
+  </head>
+  <body>
+    <article>
+      <!--
+        The CSS Box model as a whole applies to block boxes.
+        It defines how the different parts of a box - margin, border, padding and content -
+         work together to create a box that you can see on a page.
+        Inline boxes use just some of the behavior defined in the CSS Box model.
+        There is a standard and an alternate box model.
+        By default, browsers use the standard box model.
+        
+        PARTS OF A BOX:
+            The following make up a block box in CSS:
+                1. Content box - the area where your content is displayed. Size it using properties like width and height
+
+                2. Padding box - the padding sits around the content as whitespace. Size it using padding and other related properties
+
+                3. The border box - wraps the content and any padding. Size it using border and related properties
+
+                4. The margin box - the outermost layer. Wraps the content, padding and border as whitespace betwn this box and other elements.
+                       Size it using margin and relate properties
+    -->
+
+      <p>I am just a paragraph</p>
+
+      <p>I am just another paragraph</p>
+
+      <p class="inline">I am an inline paragraph</p>
+    </article>
+  </body>
+</html>

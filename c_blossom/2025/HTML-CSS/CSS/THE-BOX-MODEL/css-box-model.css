@@ -1,0 +1,16 @@
+article p:first-child {
+  width: 200px;
+  height: 200px;
+  color: blueviolet;
+}
+
+p {
+  background-color: #ccc;
+  color: red;
+  padding: 10px;
+  border: solid aqua 3px;
+}
+
+p[class] {
+  display: inline;
+}

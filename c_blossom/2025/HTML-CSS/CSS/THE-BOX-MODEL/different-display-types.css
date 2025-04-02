@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+}
+
+/*
+    A paragraph with a border added in CSS.
+    The browser renders this as a block box
+    The paragraph starts on a new line and extends the entire available width.
+
+    A list that is laid out using display: flex.
+    This establishes flex layout for the children of the container, which are flex items.
+    The list itself is a block box and just like the paragraph, expands to the full container width and breaks onto a new line
+
+    A block level paragraph in which there are two span elements.
+    These elements would normally be inline.
+    One of the elements has a class of block, which gets set to display:block.
+*/
+p,
+ul {
+  border: 2px solid rebeccapurple;
+  padding: 0.1em;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li,
+.block {
+  border: solid red 2px;
+  margin: 2px;
+  padding: 10px;
+}
+
+.block {
+  display: block;
+}
