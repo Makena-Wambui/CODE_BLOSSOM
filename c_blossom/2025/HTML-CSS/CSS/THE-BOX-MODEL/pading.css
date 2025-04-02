@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  border: 5px solid blue;
+  margin: 50px;
+  padding: 20px;
+}
+
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: #ccc;
+  padding-top: 0;
+  padding-right: 50px;
+  padding-bottom: 70px;
+  padding-left: 30px;
+}
