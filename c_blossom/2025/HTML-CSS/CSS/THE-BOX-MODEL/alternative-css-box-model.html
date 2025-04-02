@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The alternative CSS Box Model</title>
+    <link rel="stylesheet" href="alternative-css-box-model.css" />
+  </head>
+  <body>
+    <!--
+        In this model, there is no need to add up the border and padding to get the real size of the box.
+        The height and width properties account for the content area only.
+        The padding and border are added to the height and width properties.
+        So if a box has a width of 300px and a padding of 20px, if the alternative model is used, then the total width of the box will be 300px.
+        But if the standard model is used, then the total width of the box will be 340px.
+
+        To turn on the alternative model for an element, set box-sizing: border-box on it
+
+        To use the alternative box model for all elements, set the box-sizing property on the <html> element,
+            and set all other elements to inherit the box-sizing property.
+    -->
+
+    <div class="box">I am a div</div>
+
+    <div>I am also a div</div>
+  </body>
+</html>

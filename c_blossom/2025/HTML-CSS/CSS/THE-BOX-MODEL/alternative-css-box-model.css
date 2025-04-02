@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+}
+
+div {
+  padding: 20px;
+  margin: 20px;
+  border: solid 5px red;
+  width: 350px;
+  height: 150px;
+}
+
+/*
+The actual space taken up by this box with a class of box is 350px in the inline direction and 150px in the block direction.
+*/
+.box {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
