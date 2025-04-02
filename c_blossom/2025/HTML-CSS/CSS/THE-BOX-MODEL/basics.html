@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The box model</title>
+  </head>
+  <body>
+    <!--
+        Everything in CSS has a box around it.
+        Understanding these boxes is key to being able to create more complex layouts with CSS, or to allign items with other items.
+
+        In CSS, we have several types of boxes that generally fit into the categories of block boxes and inline boxes.
+        The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page.
+        Boxes have an inner display type and an outer display type.
+        You can set various values for the display type using the display property, which can have various values
+
+        If a box has a display value of block:
+            The box will break onto a new line
+            Width and height properties are respected
+            Padding, margin and border will cause other elements to be pushed away from the box.
+            If width is not specified, the box will extend in the inline direction to fill the space available in its container.
+                in most cases the box will become as wide as its container, filling up 100% of the space available.
+            Some HTML elements such as h1 and p use block as their outer display type by default
+
+
+        If a box has a display type of inline:
+            The box will not break onto a new line
+            Width and height properties will not apply
+            Top and bottom paddings, margins, borders will apply but will not cause other inline boxes to move away from the box.
+            Left and right padding, margins, borders will apply and will cause other inline boxes to move away from the box.
+            Some HTML elements such as a, span, em, strong use inline as their outer display type by default
+
+      INNER AND OUTER DISPLAY TYPES:
+        Block and inline display values are said to be outer display types.
+        They affect how the box is laid out in relation to other boxes around it
+        Boxes also have an inner display type - dictates how elements inside that box are laid out.
+        You can change the inner display type by changing the inner display value for ex, display: flex
+        The element will still use the outer display type block, but the inner display type will be changed to flex.
+        Any direct children of this box will become flex items and will behave according to the Flexbox specification.
+        Will learn more about inner display values that boxes can have, like flex and grid when I learn about CSS Layout
+
+
+    -->
+  </body>
+</html>
