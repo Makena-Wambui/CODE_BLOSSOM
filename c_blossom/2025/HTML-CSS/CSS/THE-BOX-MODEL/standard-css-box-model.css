@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+}
+
+/*
+The total width taken by .box is (350 + 2 + 2 + 20 + 20)px
+The total height taken by .box is (150 + 2 + 2 + 20 + 20)px
+
+The margin is not counted towards the actual size of the box
+Yes, it affects the total space that the box will take up on the page, but only the space outside the box
+The box's area stops at the border, it does not extend into the margin.
+*/
+.box {
+  width: 350px;
+  height: 150px;
+}
+
+div {
+  border: solid 2px black;
+  padding: 20px;
+  margin: 10px;
+}
