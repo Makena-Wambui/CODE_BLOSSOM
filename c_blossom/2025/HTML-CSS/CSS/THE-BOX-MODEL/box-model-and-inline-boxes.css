@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+}
+p {
+  border: 1px solid rebeccapurple;
+  width: 300px;
+}
+
+span {
+  border: 1px solid red;
+  background-color: lightblue;
+  width: 80px; /* ignored */
+  height: 100px; /* ignored */
+  padding: 20px;
+  margin: 20px;
+}

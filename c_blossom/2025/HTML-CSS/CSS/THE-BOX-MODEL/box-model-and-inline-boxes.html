@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The box model and inline boxes</title>
+    <link rel="stylesheet" href="box-model-and-inline-boxes.css" />
+  </head>
+  <body>
+    <!--
+        Box model behavior fully applies to block boxes
+        Some of the properties can apply toinline boxes also, such as those created by a span element
+
+        We have a span inside a paragraph
+        We have applied a width, height, padding, border and margin to the span
+        But the width and height properties do not apply to inline boxes
+        The top and bottom margin, padding and border are respected
+        But dont change the relationship of other content to the inline box
+        The padding and border overlap other words in the paragraph
+        The left and right margiin, padding and border are respected
+        They move the inline box away from the other content
+    -->
+
+    <p>
+      I am a paragraph and this is a <span>span</span> inside that paragraph. A
+      span is an inline element and so does not respect width and height.
+    </p>
+  </body>
+</html>
