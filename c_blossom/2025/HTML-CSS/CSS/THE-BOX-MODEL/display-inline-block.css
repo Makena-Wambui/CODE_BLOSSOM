@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+}
+
+p {
+  width: 300px;
+  border: 2px solid rebeccapurple;
+  margin: 20px;
+}
+
+span {
+  margin: 20px;
+  border: 2px solid blue;
+  display: inline-block;
+  background-color: yellow;
+  padding: 5px;
+  width: 100px;
+  height: 80px;
+}
+
+ul {
+  display: flex; /* to display the links in a row */
+  list-style: none; /* to remove the default bullet points */
+  border: 1px solid black;
+}
+
+li {
+  margin: 5px;
+}
+
+.links-list a {
+  color: #fff;
+  background-color: magenta;
+  text-decoration: none;
+  padding: 1em 2em; /* this is shorthand for padding: 1em 2em 1em 2em; */
+  display: inline-block; /* so that padding and margin are applied */
+}
+
+.links-list a:hover {
+  background-color: maroon;
+  color: #fff;
+}

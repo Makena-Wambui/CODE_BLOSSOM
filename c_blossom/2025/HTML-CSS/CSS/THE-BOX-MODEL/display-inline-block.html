@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display: inline-block</title>
+    <link rel="stylesheet" href="display-inline-block.css" />
+  </head>
+  <body>
+    <!--
+        inline-block is a special value of display
+        provides a middle ground between inline and block
+        use it if you do not want an item to break into a new line,
+        but want it to respect width and height and avoid overlapping.
+
+        an element with display: inline-block will do a subset of what a block element does:
+        - it will respect width and height
+        - padding, margin and border will be applied and will cause other elements to be pushed away from it
+
+        - but it will not break into a new line
+        - will only become larger than its content if width and height are set
+    -->
+
+    <p>
+      I am a paragraph and this is a <span>span</span> inside that paragraph. A
+      span is an inline element and so does not respect width and height.
+    </p>
+
+    <!--
+        inline-block is useful when you want to give a link a larger hit area by adding padding
+        <a> is an inline element like <span>
+            use display: inline-block to allow padding to be set, making the link larger and easier for a user to click on it
+            This is seen fairly frequently in navigation bars
+
+        in the example below, the navigation is displayed in a row using flexbox
+        we add padding to the <a> element as we want to change the background color when <a> is hovered
+            the padding appears to overlap the border on the <ul> element because <a> is an inline element
+    -->
+
+    <nav>
+      <ul class="links-list">
+        <li><a href="">Link One</a></li>
+        <li><a href="">Link Two</a></li>
+        <li><a href="">Link Three</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

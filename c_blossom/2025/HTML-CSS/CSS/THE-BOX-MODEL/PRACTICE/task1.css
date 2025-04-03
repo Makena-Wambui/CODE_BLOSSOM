@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+}
+
+.standard {
+  width: 300px;
+  height: 200px;
+}
+
+.standard,
+.alternate {
+  margin: 10px;
+  background-color: #ccc;
+  border: 2px solid rebeccapurple;
+  padding: 20px;
+}
+
+/* we want this box to have the same width and height as the standard box */
+/* but we want to use the border-box model */
+.alternate {
+  box-sizing: border-box;
+  width: 344px; /* 300px + 2 * 20px + 2 * 2px */
+  height: 244px; /* 200px + 2 * 20px + 2 * 2px */
+}
