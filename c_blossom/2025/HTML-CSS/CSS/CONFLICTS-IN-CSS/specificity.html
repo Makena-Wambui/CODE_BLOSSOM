@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity></title>
+    <link rel="stylesheet" href="specificity.css" />
+  </head>
+  <body>
+    <!--
+
+        Specificity is an algorithm that the browser uses to determine which property values should be applied to an element.
+
+        Say you have multiple style blocks;
+        These style blocks have different selectors 
+        These selectors configure the same property with different values;
+        while targeting the same element;
+        specificity decides the property value that gets applied to the element.
+        It is basically a measure of how specific a selector's selection/targeting is.
+                An element selector is less specific.
+                It selects all elements of that type that appear on the page.
+                pseudo element selectors have the same specificity as regular element selectors.
+
+                A class selector is more specific.
+                It will select only the elements on a page that have a specific class attribute value.
+                Has more weight than an element selector.
+                Attribute selectors have the same specificity as class selectors.
+                A pseudo class selector has the same specificity as a class selector.
+    -->
+
+    <h1 class="main-heading">This is a top level heading</h1>
+  </body>
+</html>

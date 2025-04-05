@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+}
+
+/* 
+    This rule is applied instaed of the one below 
+    The class selector .main-heading gives this rule a higher specificity than the element selector h1
+*/
+.main-heading {
+  color: red;
+}
+
+/*
+    Even though this rule appears further down in the source order, it is not applied
+    */
+h1 {
+  color: blue;
+}

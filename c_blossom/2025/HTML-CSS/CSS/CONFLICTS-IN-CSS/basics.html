@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conflicting Rules</title>
+    <link rel="stylesheet" href="basics.css" />
+  </head>
+  <body>
+    <!--
+        CSS stands for Cascading Style Sheets.
+
+        The term "cascading" is incredibly important to understand.
+        The way that the Cascade behaves is key to underastanding CSS.
+
+        When working on a project, you might find that the CSS you thought should be applied to an element is not.
+        Often the reason for this could be:
+          You created two rules that apply different values of the same property to the same element.
+        Cascade and Specificity are mechanisms which control which rule is applied when there are conflicting rules.
+        The rule that is styling your element may not be the one you expect.
+        Thus, understand how these mechanisms work.
+
+        Inheritance is also another key concept in CSS.
+        It might cause some unexpected behavior.
+        It means some CSS properties by default inherit values set on the current element's parent element and others do not.
+
+
+        CASCADE:
+            Stylesheets cascade.
+            Simply put, this means the origin and the order of the CSS rules matter.
+            When two rules both have equal specificity, the one that is defined last in the stylesheet is applied.
+            Other advanced concepts such as cascade layers might also affect the cascade.
+            In the example, we have two rules that could apply to the <h1> element.
+              The h1 content ends up being colored blue
+              Because both rules are from the same source, have an identical element selector, thus have the same specificity.
+              Thus the last one in the source order is applied.
+    -->
+    <h1>This is my top level heading</h1>
+  </body>
+</html>
