@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+    <link rel="stylesheet" href="more-inheritance.css" />
+  </head>
+  <body>
+    <!--
+        We have an ul element with two levels of unordered lists nested inside it.
+
+        We will give the outer ul a border, padding and font color.
+
+        color property is an inherited property.
+        the color property valueis applied to ul's direct children (li elements) and to the indirect children (li elements inside the nested ul).
+
+        we added a separate class to the inner ul element to override the inherited color property.
+        This is inherited down through its children
+
+        Properties like width, border, margin, padding are not inherited properties.
+        If the border in our example was an inherited property, it means every single list and list item would have a border.
+        This is an effect we don't want to achieve. 
+    -->
+
+    <ul class="outer">
+      <li>Item One</li>
+      <li>
+        Item Two
+        <ul>
+          <li>2.1</li>
+          <li>2.2</li>
+        </ul>
+      </li>
+      <li>
+        Item Three
+        <ul class="inner">
+          <li>
+            3.1
+            <ul>
+              <li>3.1.1</li>
+              <li>3.1.2</li>
+            </ul>
+          </li>
+          <li>3.2</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

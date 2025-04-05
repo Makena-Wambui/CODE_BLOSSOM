@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+    <link rel="stylesheet" href="inheritance.css" />
+  </head>
+  <body>
+    <!--
+        Some CSS property values set on parent elements are inherited by their children.
+        While other CSS property values set on parent elements are not inherited by their children.
+
+        You may set a color and a font family on an an element.
+        Every element inside that element will be styled with that color and font family.
+        Unless you apply a different color and font value directly to them
+    -->
+
+    <p>
+      As the body has been set to have a color of blue this is inherited through
+      the descendants.
+    </p>
+    <p>
+      We can change the color by targeting the element with a selector, such as
+      this
+      <span>span</span>.
+    </p>
+
+    <!--
+        Some property values do not inherit
+        For instance if you set a width of 50% on a parent element,
+        all its descendants will not inherit that width.
+
+        In summary, the three concepts: cascade, specificity and inheritance are what determine which CSS applies to what element.
+    -->
+  </body>
+</html>

@@ -1,0 +1,11 @@
+.outer {
+  color: purple;
+  border: 2px solid red;
+  padding: 3em;
+  margin: 2em;
+}
+
+.inner {
+  color: #000;
+  font-weight: bold;
+}
