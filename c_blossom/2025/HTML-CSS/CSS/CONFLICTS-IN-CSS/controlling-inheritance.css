@@ -1,0 +1,16 @@
+body {
+  color: green;
+}
+
+/* If this rule is removed, the link will be the default blue color */
+.my-class-1 a {
+  color: inherit; /* will inherit the color from the body hence the link will be green */
+}
+
+.my-class-2 a {
+  color: initial; /* uses the initial value of the property which is black, and not the browser default for links which is blue */
+}
+
+.my-class-3 a {
+  color: unset; /* will inherit the color from the body hence the link will be green */
+}

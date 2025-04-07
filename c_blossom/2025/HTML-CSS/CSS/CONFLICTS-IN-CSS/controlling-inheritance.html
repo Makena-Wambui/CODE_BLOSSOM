@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controlling inheritance</title>
+    <link rel="stylesheet" href="controlling-inheritance.css" />
+  </head>
+  <body>
+    <!--
+        CSS provides five special universal property values that can be used to control inheritance.
+        Every CSS property can accept these values, but they are not applicable to all properties.
+        1. inherit - sets the property value apllied to a selected element to be the same as that of its parent element.
+                    turns on inheritance.
+        
+        2. initial - sets the property value applied to a selected element to be the same as the initial value of that property.
+                    
+        3. unset - sets the property value applied to a selected element to the value it would have had if no styles had been applied to it.
+                    acts like inherit if the property is inherited, and like initial if it is not.
+        4. revert - reset the property value applied to a selected element to the value it would have had if no styles had been applied to it.
+                    ie the browser default styling.
+                    acts like unset if the property is inherited, and like initial if it is not.
+        5. revert-layer - resets the property value applied to a selected element to the value it would have had if no styles had been applied to it.
+                        acts like revert, but only for the current layer of styles.
+
+
+        Let us look at a list of links and explore how these universal values work.
+        
+    -->
+    <ul>
+      <li>Default <a href="#">link</a> color</li>
+      <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+      <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+      <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+    </ul>
+  </body>
+</html>
