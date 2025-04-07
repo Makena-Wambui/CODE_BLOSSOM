@@ -1,0 +1,10 @@
+blockquote {
+  margin: 2em;
+  background-color: orange;
+  border: 2px solid blue;
+  padding: 1em 1em 1em 0;
+}
+
+.fix-it {
+  all: unset; /* all properties are unset */
+}
