@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Links</title>
+  </head>
+  <body>
+    <p>
+      You can create links or buttons that when clicked on,<br />will open a new
+      outgoing email message;<br />
+      by using <code>&lt;a&gt;</code> and <code>mailto:</code> URL scheme
+    </p>
+
+    <p>
+      In its most basic and commonly used form, a <code>mailto:</code> link
+      indicates the email address of the intended recipient.
+    </p>
+
+    <p><a href="mailto:iammakena@gmail.com">Send email to Alicia</a></p>
+
+    <p>
+      You can also leave out the email address.<br />
+      You can omit it so your href is "mailto:" <br />
+      The user's email client will open a new outgoing email window with no
+      destination email address. <br />
+      Often useful as Share links that users can click on to send an email to a
+      friend.
+    </p>
+
+    <p><a href="mailto:">Share</a></p>
+
+    <p>You can specify other details like cc, bcc, subject and body.</p>
+
+    <p>
+      <a
+        href="mailto:iammakena@gmail.com?cc=terry@gmail.com&bcc=ally@gmail.com&subject=Valedictorian+Speech&body=Hello+there"
+        >You can reach me here</a
+      >
+    </p>
+  </body>
+</html>

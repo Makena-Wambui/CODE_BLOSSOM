@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non Semantic Wrappers In HTML</title>
+    <link rel="stylesheet" href="file-css.css" />
+  </head>
+  <body>
+    <!--
+        Sometimes you might not find an ideal semantic element for wrapping content or grouping items together.
+        Sometimes you might want to group some elements together so as to affect them all as a single unit using CSS or JavaScript.
+
+        Use <div> and <span> elements to group elements together when there is no ideal semantic element for the job.
+            Use preferrably with a suitable class attribute, to provide some kind of label for them so that they can be easily targeted with CSS or JavaScript.
+
+        <span> is an inline non semantic element.
+            use it when you can not think of a better semantic text element to wrap your content, or dont want to add any specific meaning
+    
+        <div> is a block level non semantic element.
+            Only use when you cant think of a better semantic block level element to wrap your content, or dont want to add any specific meaning.
+
+            Imagine a shopping cart widget that you could choose to display on the left or right side of the page.
+            You could wrap the entire widget in a <div> element and give it a class of 'shopping-cart' so that you can easily target it with CSS.
+            -->
+
+    <p>
+      The King walked drunkenly back to his room at 01:00, the beer doing
+      nothing to aid him as he staggered through the door.<span
+        class="Editor-Note"
+        >Editor's Note: Lights Down Low at this point.</span
+      >
+    </p>
+
+    <div class="shopping-cart">
+      <h2>Shopping Cart</h2>
+      <ul>
+        <li>
+          <p>
+            <a href=""><strong>Silver Earrings</strong>:</a> $90
+          </p>
+          <img src="images/earring.jpg" alt="Earrings" />
+        </li>
+      </ul>
+
+      <p>Total Cost: $90</p>
+    </div>
+  </body>
+</html>

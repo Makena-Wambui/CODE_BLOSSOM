@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    Each element has event handler properties like onclick, onmouseover, onmouseout, etc.
+
+    You can assign an event handler by setting the property to a function.
+    -->
+
+    <button id="btn">Click</button>
+
+    <script>
+      let mybutton = document.querySelector("#btn");
+
+      mybutton.onclick = function () {
+        alert("Button clicked");
+        alert(this.id);
+        alert(this.innerHTML);
+      };
+
+      // The above anonymous function becomes the element's method.
+      // this is therefore the element itself.
+      // Thus you can access the elements properties and methods inside the event handler.
+
+      /*
+      You can remove the event handler by setting the value of the event handler property to null.
+      */
+      mybutton.onclick = null;
+
+      /*
+      ADVANTAGES:
+      - Simple and easy to understand.
+      - Cross browser compatible.
+      */
+    </script>
+  </body>
+</html>

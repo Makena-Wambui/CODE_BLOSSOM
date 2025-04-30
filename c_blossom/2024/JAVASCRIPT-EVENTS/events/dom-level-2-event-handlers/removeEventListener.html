@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>removeEventListener() method</title>
+  </head>
+  <body>
+    <!--
+    Removes an event listener that was added via addEventListener() method.
+
+    Must pass the same args as were passed to addEventListener() method.
+    -->
+    <div>
+      <button id="btn">Click</button>
+    </div>
+
+    <div>
+      <input type="button" id="input" value="Button" />
+    </div>
+    <script>
+      let button = document.getElementById("btn");
+
+      // Assign an arrow function to a variable
+
+      let eventHandler = () => {
+        alert("Clicked!");
+      };
+
+      // Register the event handler
+      button.addEventListener("click", eventHandler);
+
+      // Remove the event handler
+      button.removeEventListener("click", eventHandler);
+
+      /*
+      Using an anonymous function like this will not work.
+      */
+      let btn = document.querySelector("#input");
+
+      btn.addEventListener("click", function () {
+        alert("Button clicked");
+      });
+      // does not work
+      btn.removeEventListener("click", function () {
+        alert("Button clicked");
+      });
+    </script>
+  </body>
+</html>

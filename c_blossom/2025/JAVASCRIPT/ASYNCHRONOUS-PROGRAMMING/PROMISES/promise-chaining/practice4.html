@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Load A script Dynamically in Javascript</h1>
+    <script>
+      function loadScript(src) {
+        return new Promise((resolve, reject) => {
+          let myScript = document.createElement("script");
+
+          myScript.src = src;
+
+          myScript.onload = () => resolve(myScript);
+
+          myScript.onerror = () =>
+            reject(new Error(`Script: ${src} failed to load.`));
+          document.head.append(myScript);
+        });
+      }
+
+      //let myPromise = loadScript("./practice2.js");
+      let myPromise = loadScript("./345.js");
+
+      myPromise
+        .then((value) => {
+          alert(`Success for ${value.src}`);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Independent Top Level Scope For Each Script</title>
+  </head>
+  <body>
+    <!--
+    !In the browser, independent top level scope also exists for each script type="module" tag.
+
+    Here are are two script tags on the same page, both type='module'.
+    Each script tag has its own independent top level scope.
+    They do not see each others's top level variables.
+    -->
+
+    <script type="module">
+      // This variable is only visible in this script
+      // let user = "John";
+      window.user = "John";
+    </script>
+
+    <!--
+      ~ In the browser, we can make a variable window-level global by assigning it to a window property.
+      e.g. window.user = "John";
+      ~ This way, the variable becomes available to all scripts on the page.
+      ! All scripts will be able to see it, use it and modify it.
+      That is all scripts with type="module" and without it.
+    -->
+
+    <script type="module">
+      // alert(user); Error: user is not defined
+      alert(window.user); // John
+
+      // Changing the value of user
+      window.user = "Pete";
+
+      alert(window.user); // Pete
+    </script>
+  </body>
+</html>

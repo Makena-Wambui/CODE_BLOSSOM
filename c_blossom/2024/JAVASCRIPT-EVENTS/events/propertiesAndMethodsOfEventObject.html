@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Properties And Methods of Event Object</title>
+  </head>
+  <body>
+    <button id="id1">Click Me.</button>
+
+    <script>
+      let myButton = document.querySelector("#id1");
+
+      myButton.addEventListener(
+        "click",
+        (event) => {
+          // Log the type of event that occurred
+          console.log(event.type);
+
+          // bubbles property; true if the event bubbles up through the DOM, otherwise false
+          console.log(event.bubbles);
+
+          // cancelable property; true if the event can be canceled, otherwise false
+          console.log(event.cancelable);
+
+          // currentTarget property; returns the current element on which the event is firing
+          console.log(event.currentTarget);
+
+          // defaultPrevented property; true if preventDefault() has been called, otherwise false
+          console.log(event.defaultPrevented);
+
+          // detail property; returns the number of times the event was triggered
+          console.log(event.detail);
+
+          // eventPhase property; returns the phase of the event flow; 0 for none, 1 for capturing, 2 for at target, and 3 for bubbling
+          console.log(event.eventPhase);
+
+          // preventDefault() method; prevents the default action of the event from being triggered. Effective only for events that can be canceled
+          // event.preventDefault();
+
+          // stopPropagation() method; cancel any further event capturing or bubbling. Used only when bubbles property is true
+          // event.stopPropagation();
+
+          // target property; returns the element that triggered the event
+          console.log(event.target);
+
+          /*
+          NB:
+          The event object is only accessible inside the event handler function.
+          
+          Once all event listeners have been executed, the event object is destroyed.
+
+          Thus it is not possible to access the event object outside the event handler function.
+          */
+        }
+        // true
+      );
+      // console.log(event.type);
+    </script>
+  </body>
+</html>

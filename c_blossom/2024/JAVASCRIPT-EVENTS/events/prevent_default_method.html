@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>preventDefault() Method</title>
+  </head>
+  <body>
+    <a href="https://developer.mozilla.org/en-US/">MDN</a>
+    <script>
+      /*
+        To prevent the default behavior of an event, use this method
+
+        When you click a link, the browser takes you to the URL specified in the href attribute of the link.
+
+        You can prevent this behavior by using the preventDefault() method of the event object.
+        */
+
+      // We target the anchor element
+      let myLink = document.querySelector("a");
+
+      // We add an event listener to the anchor element
+      myLink.addEventListener("click", (event) => {
+        alert("You clicked the link");
+
+        // call the preventDefault() method to prevent the default behavior of the event
+        event.preventDefault();
+
+        // preventDefault() method does not prevent the event from bubbling up the DOM tree
+        // An event can only be canceled if it is cancelable
+      });
+    </script>
+  </body>
+</html>

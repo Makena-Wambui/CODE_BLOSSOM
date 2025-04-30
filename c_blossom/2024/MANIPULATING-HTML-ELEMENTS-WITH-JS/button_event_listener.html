@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button1">Click Me!</button>
+
+    <script>
+      // we target the button element by its id
+      let button = document.getElementById("button1");
+
+      // we add an event listener to the button element;
+      // the first argument is the event we want to listen for ie click
+      // the second argument is the function that will be executed when the event is triggered
+      button.addEventListener("click", () => {
+        console.log("Button clicked!");
+      });
+    </script>
+  </body>
+</html>

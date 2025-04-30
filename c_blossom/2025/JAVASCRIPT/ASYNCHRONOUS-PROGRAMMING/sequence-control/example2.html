@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javascript Functions</h1>
+    <h2>Function Sequece</h2>
+    <p>Functions are executed in the order that they are called</p>
+    <p>The result of the calculation is:</p>
+    <p id="demo"></p>
+
+    <script>
+      /*
+            The problem with this code is that you can not stop the calculator function from  displaying the result.
+        */
+      function myDisplay(arg) {
+        document.getElementById("demo").innerHTML = arg;
+      }
+
+      function myCalculator(num1, num2) {
+        let sum = num1 + num2;
+        myDisplay(sum);
+      }
+      myCalculator(1, 2);
+    </script>
+  </body>
+</html>

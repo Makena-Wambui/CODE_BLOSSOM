@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>Example 1</h2>
+      <!--
+      The following example shows how to use an HTML event handler attribute to assign an event handler to the click event of a button element.
+    -->
+
+      <!--
+    The code in the event handler can access the event object using the event parameter.
+
+    this value inside the event handler refers to the event's target element.
+    for example, in the following code, this refers to the button element.
+
+    The event handler can also access the target element's properties.
+
+    DISADVANTAGES:
+    Using HTML event handler attributes is considered bad practice.
+    JS code is mixed with HTML code, making it difficult to maintain, debug and extend the code.
+
+    Timing: 
+    If the HTML element is loaded fully before the JS code, users can start interacting with the element on the webpage before the JS code is loaded, hence the event handler will not work, and lead to errors.
+
+    For ex if the handleClick() function is defined in an external JS file, 
+    and the page is fully loaded before the JS file loads,
+    handleClick function is undefined.
+    So if the user clicks the button before the JS file loads, the event handler will not work.
+        -->
+      <input
+        type="button"
+        value="Save"
+        onclick="alert('Saved!'); alert(event.type); alert(this.value);alert(type);"
+      />
+    </div>
+
+    <div>
+      <h2>Example 2</h2>
+
+      <input type="button" value="submit" onclick="handleClick()" />
+    </div>
+
+    <!--
+    When you use HTML characters in the value of the event handler HTML attribute,
+    like &, "", <, >, etc., you must escape them.
+    
+    An event handler defined in the HTML can call a function defined in a script element.
+
+    The function can also be defined in a separate external JS file
+    -->
+    <script>
+      /*
+        An event can have multiple event handlers.
+
+        When the event is fired, all handlers are executed in the order in which they were added.
+
+        1. HTML event handler attributes
+        Event handlers typically have names that start with on like onClick or onSubmit.
+        onClick is the event handler for the click event.
+        onSubmit is the event handler for the submit event.
+
+        To assign an event handler to an event associated with an HTML element, 
+        you can use an HTML attribute with the name of the event handler as the attribute name and the code to be executed as the attribute value.
+      */
+
+      function handleClick() {
+        alert("Submitted!");
+      }
+    </script>
+  </body>
+</html>

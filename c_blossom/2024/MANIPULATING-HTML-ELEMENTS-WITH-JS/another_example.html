@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM MANIPULATION</title>
+  </head>
+  <body>
+    <h1 id="myId">Hello, and Welcome!</h1>
+
+    <button id="button1">Click Me!</button>
+
+    <script>
+      // Select the element with the id of "myId"
+      const myHeading = document.getElementById("myId");
+
+      // Target the element with the id of "button1"
+      const myButton = document.getElementById("button1");
+
+      // Add an event listener to the button
+      myButton.addEventListener("click", () => {
+        // Change the content of the Button
+        myButton.innerHTML = "You clicked me!";
+
+        // Change the color of the heading
+        myHeading.style.color = "red";
+      });
+    </script>
+  </body>
+</html>

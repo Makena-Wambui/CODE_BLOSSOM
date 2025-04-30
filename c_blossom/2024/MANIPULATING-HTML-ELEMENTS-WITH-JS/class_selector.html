@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document.getElementsByClassName()</title>
+  </head>
+  <body>
+    <p class="myClass">This is a paragraph</p>
+    <p class="myClass">This is the second paragraph</p>
+
+    <script>
+      // target all elements whose class name is "myClass"
+      let paragraphs = document.getElementsByClassName("myClass");
+
+      // Target only the first element in the array
+      paragraphs[0].innerHTML = "This paragraph has been changed by JavaScript";
+
+      // Target only the second element in the array
+      paragraphs[1].style.backgroundColor = "yellow";
+    </script>
+  </body>
+</html>

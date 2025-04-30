@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple calculator</title>
+  </head>
+  <body>
+    <script>
+      let firstNum = prompt("Enter the first number: ");
+
+      let operator = prompt("What operation would you like to perform?");
+
+      let secondNum = prompt("Enter the second number: ");
+
+      // convert the numbers using parseFloat
+      firstNum = parseFloat(firstNum);
+      secondNum = parseFloat(secondNum);
+      /*
+      if (operator === "+") {
+        console.log(firstNum + secondNum);
+      } else if (operator === "-") {
+        console.log(firstNum - secondNum);
+      } else if (operator === "*") {
+        console.log(firstNum * secondNum);
+      } else if (operator === "/") {
+        console.log(firstNum / secondNum);
+      } else {
+        console.log("Invalid operation.");
+      }
+      */
+
+      switch (operator) {
+        case "-":
+          let result = firstNum - secondNum;
+          console.log(result);
+          break;
+
+        case "+":
+          let result1 = firstNum + secondNum;
+          console.log(result1);
+      }
+    </script>
+  </body>
+</html>

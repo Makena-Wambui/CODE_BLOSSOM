@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+    IIFE was used in some old code before the introduction of block scoped let and const in ES6.
+
+    With var, we only have function scope and global scope.
+
+    Create 2 buttons with the text Button 0 and Button 1.
+    When we click them, we want them to alert 0 and 1 respectively.
+    This code does not work as expected because the value of i is 2 when the loop ends.
+    
+
+      for (var i = 0; i < 2; i++) {
+        const button = document.createElement("button");
+
+        button.innerText = `Button ${i}`;
+
+        button.onclick = function () {
+          console.log(i);
+        };
+        document.body.appendChild(button);
+      }
+
+      console.log(i); // i is 2 when the loop ends because var does not have block scope.
+
+      To fix this, we can use an IIFE to create a new scope for each iteration of the loop.
+      
+      for (var i = 0; i < 2; i++) {
+        const button = document.createElement("button");
+
+        button.innerText = `Button ${i}`;
+
+        button.onclick = (function (copyOfI) {
+          return function () {
+            console.log(copyOfI);
+          };
+        })(i);
+        document.body.appendChild(button);
+      }
+
+      console.log(i); // i is 2 when the loop ends because var does not have block scope hence persists outside the loop.
+      */
+
+      // With ES6 let and const, we have block scope.
+      for (let i = 0; i < 2; i++) {
+        const button = document.createElement("button");
+
+        button.innerText = `Button ${i}`;
+
+        button.onclick = function () {
+          console.log(i);
+        };
+        document.body.appendChild(button);
+      }
+
+      console.log(i); // i is not defined because let has block scope.
+    </script>
+  </body>
+</html>

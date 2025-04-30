@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="file-css.css" />
+    <title>Span practice</title>
+  </head>
+  <body>
+    <p>This is <span style="background-color: red">important</span></p>
+
+    <p>Click on this <span id="highlight">text</span> to change its color</p>
+
+    <script>
+      document
+        .getElementById("highlight")
+        .addEventListener("click", () => (this.style.color = "blue"));
+    </script>
+
+    <p>HTML is an <span class="awesome">awesome</span> language!</p>
+
+    <p>
+      The sky is <span style="color: blue">blue</span>, the grass is
+      <span style="color: green">green</span>, and roses are
+      <span style="color: red">red</span>.
+    </p>
+
+    <p>Click on <span class="Hello">'Hello'</span> to change its color</p>
+
+    <script>
+      document.getElementsByClassName("Hello")[0].onclick = () =>
+        (this.style.color = "green");
+    </script>
+
+    <!--The word hover should turn yellow when the mouse hovers over it-->
+    <p>Hover over this <span id="hover">word</span> to turn it yellow</p>
+
+    <script>
+      document.getElementById("hover").onmouseover = () =>
+        (this.style.color = "yellow");
+    </script>
+  </body>
+</html>

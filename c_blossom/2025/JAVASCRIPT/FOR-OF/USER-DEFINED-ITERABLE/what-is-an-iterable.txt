@@ -1,0 +1,15 @@
+An iterable is an object that can be iterated over.
+This means it has a method that can retrieve one item at a time until all items are retrieved.
+
+You make an object iterable by: 
+    The object must have a method with the key Symbol.iterator
+    This method must return an iterator.
+
+
+An iterator is an object:
+    That implements a next() method
+    The next method returns an object with two properties:  
+        value - which is the current value
+        done - a boolean indicating whether iteration is complete.
+
+        

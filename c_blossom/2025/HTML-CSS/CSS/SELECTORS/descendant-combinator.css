@@ -1,0 +1,22 @@
+/*
+
+The descendant combinator is typically represented by a single space character between two selectors. 
+It matches all elements that are descendants of a specified element.
+Ancestor could be parent, parent of parent, parent of parent of parent, and so on.
+Selectors that utilize the descendant combinator are called descendant selectors.
+The descendant combinator is the most widely used combinator in CSS.
+*/
+
+/* Targeting all the list items that are descendants of the main-dishes list */
+ul.main-dishes li {
+  color: gold;
+  padding: 5px;
+}
+
+/*
+The descendant combinator is technically one or more CSS white space characters;
+  the space character and/or one of four control characters: carriage return, form feed, tab, or line feed;
+between two selectors in the absence of any other combinator.
+
+The white space characters that comprise the combinator may also contain any number of CSS comments.
+*/

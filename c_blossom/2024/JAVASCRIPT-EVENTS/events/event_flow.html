@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Demo</title>
+  </head>
+  <body>
+    <div id="container">
+      <!--
+        When you click on this button, the click event will be triggered.
+        This event occurs on the button, the button's container(div),
+        and the entire webpage.
+
+        Event flow explains the order in which events are received on the webpage:
+            Starting from the element where the event occurs,
+            and propagated thro the DOM Tree.
+
+        2 kinds of event models:
+            1. Event bubbling 
+            2. Event capturing
+
+        EVENT BUBBLING:
+            - Event starts at the most specific element;
+            - Then flows upwards to the least specific element; document object or window object.
+
+            - So when the button is clicked, the event occurs in the following order:
+                1. Button
+                2. Div with id container
+                3. Body
+                4. Html
+                5. Document
+                6. Window
+
+        EVENT CAPTURING:
+            - Event starts at the least specific element;
+            - Then flows downwards to the most specific element.
+
+            - To enable event capturing, set the third parameter of the addEventListener() method to true.
+            - The default value is false, which means the event will bubble up.
+
+            - So when the button is clicked, the event occurs in the following order:
+                1. Window
+                2. Document
+                3. Html
+                4. Body
+                5. Div with id container
+                6. Button
+
+        DOM LEVEL 2 EVENT FLOW:
+        DOM Level 2 events specify that events flow through three stages:
+            1. Capturing phase - Event trickles down from the window to the target element.
+            2. Target phase - Event reaches the target element.
+            3. Bubbling phase - Event bubbles up from the target element to the window.
+        -->
+      <button id="btn">Click Me!</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <h2>Function Sequence</h2>
+    <p>
+      Javascript functions are executed in the order in which they are called
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      function display(arg) {
+        document.getElementById("demo").innerHTML = arg;
+      }
+
+      function first() {
+        display(`Hello!`);
+      }
+      function second() {
+        display(`Goodbye!`);
+      }
+
+      first(); // first is called first setting the innerHTML to Hello!
+      second(); // second is called second setting the innerHTML to Goodbye! so finally the innerHTML is Goodbye!
+    </script>
+  </body>
+</html>

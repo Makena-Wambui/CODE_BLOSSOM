@@ -1,0 +1,15 @@
+/*
+The :invalid pseudo-class represents any <form>, <fieldset>, <input> or any other <form> element whose contents fail to validate.
+*/
+
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:invalid {
+  background-color: yellow;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}

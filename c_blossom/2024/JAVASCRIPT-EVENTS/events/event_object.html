@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Object</title>
+  </head>
+  <body>
+    <!--
+    When an event occurs,
+    the event object is created and passed by the browser as an argument to the event handler.
+
+    -->
+
+    <button id="my-button">Click Me!</button>
+
+    <script>
+      // Target the button element with the id 'my-button'
+      let myButton = document.querySelector("#my-button");
+
+      // Add an event listener to the button element
+      myButton.addEventListener("click", (event) => {
+        // Display the type of event that occurred
+        alert(event.type);
+      });
+    </script>
+  </body>
+</html>

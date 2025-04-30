@@ -1,0 +1,26 @@
+* {
+  background-color: pink;
+}
+
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: teal;
+}
+/* adjust paragraph font size and line spacing */
+p {
+  background-color: brown;
+  border: 1px solid black;
+  padding: 30px;
+  font-size: 3em;
+  line-height: 4;
+}
+
+button {
+  background-color: purple;
+  padding: 1em;
+}
+
+button:hover {
+  background-color: gold;
+}

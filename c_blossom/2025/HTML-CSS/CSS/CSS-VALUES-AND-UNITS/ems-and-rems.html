@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ems and rems</title>
+    <link rel="stylesheet" href="ems-and-rems.css" />
+  </head>
+  <body>
+    <!--
+        We have two nested lists.
+
+        Both are identical.
+
+        Only difference is that one has a class of ems and the other has a class of rems.
+
+        First we set 20px as the font size of the html element
+
+        Recap: 
+        em means my parent element's fontsize if used for the font-size property
+        it means my own font size if used for everything else like padding, margin, etc.
+
+        The li elements inside the ul element with a class of ems take their sizing from their parent element's font size, which is the ul element.
+        So each successive level of nested list will get progressively larger
+
+        rem means the root element's font size
+        The li elements inside the ul element with the class rems take their sizing from the root element, html
+        So each successive level of nesting does not get larger
+
+        If you change the html's font size, everything else changes relative to it, both em and rem sized text.
+    -->
+    <ul class="ems">
+      <li>One</li>
+      <li>Two</li>
+      <li>
+        Three
+        <ul>
+          <li>Three A</li>
+          <li>
+            Three B
+            <ul>
+              <li>Three B 2</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="rems">
+      <li>One</li>
+      <li>Two</li>
+      <li>
+        Three
+        <ul>
+          <li>Three A</li>
+          <li>
+            Three B
+            <ul>
+              <li>Three B 2</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

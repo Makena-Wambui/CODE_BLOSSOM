@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addEventListener() method</title>
+  </head>
+  <body>
+    <!--
+    Accepts 3 arguments:
+    1. Event name
+    2. Function to call when the event occurs ie the event handler
+    3. Boolean value indicating whether the event handler should be called in the capturing or bubbling phase.
+        true - capturing phase
+        false - bubbling phase
+    -->
+
+    <button id="btn">Click</button>
+
+    <script>
+      let button = document.getElementById("btn");
+
+      button.addEventListener("click", () => {
+        alert("First event handler");
+      });
+
+      // You can have multiple event handlers for a single event
+
+      button.addEventListener("click", (event) => {
+        alert("Second event handler");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo" style="text-align: center"></p>
+
+    <p id="demo1" style="text-align: center"></p>
+
+    <script>
+      /*
+        Instead of passing the name of another fuction as an argument to a function, you can pass a whole function instead.
+        */
+      setTimeout(function () {
+        document.getElementById("demo").innerHTML = "Hello And Welcome!";
+      }, 2000);
+
+      setTimeout(function () {
+        myFunc(`GoodBye`);
+      }, 3000);
+
+      function myFunc(value) {
+        document.getElementById("demo1").innerHTML = value;
+      }
+    </script>
+  </body>
+</html>

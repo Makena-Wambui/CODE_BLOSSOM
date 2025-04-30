@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javascript Promises</h1>
+    <h2>CALLBACKS VERSUS PROMISES</h2>
+
+    <script>
+      // Using callback to demonstrate how to load an external JS file on the web page
+
+      function loadScript(src, callback) {
+        // Create a new script element
+        let script = document.createElement("script");
+
+        // The src attribute of the script element is set to the URL of the script you want to load.(src parameter)
+        script.src = src;
+
+        /*
+            When the script is successfully loaded, the onload event is triggered.
+            This event calls the callback function that was passed as an argument to the loadScript function.
+            null indicates that there is no error.
+            and the script element is passed as the second argument to the callback function.
+            */
+        script.onload = () => callback(null, script);
+
+        /*
+            If the script fails to load, the onerror event is triggered.
+            This event calls the callback function with the error message.
+            */
+        script.onerror = () =>
+          callback(new Error("Script load error for ${src}"));
+
+        // We append the script element to the head of the document to load the script.
+
+        document.head.append(script);
+      }
+
+      loadScript("./user.js", (error, script) => {
+        error
+          ? console.log(`${error}`)
+          : console.log(
+              `Script loaded successfully: ${script.src}. User is accesssible: ${user}`
+            );
+      });
+
+      /*
+        Load a script using promises instead of a call back function
+
+        This new function will create and return a promise object that resolves when the loading is complete, and rejects if the loading fails.
+
+      */
+
+      function loadScript1(src) {
+        return new Promise((resolve, reject) => {
+          let script = document.createElement("script");
+
+          script.src = src;
+
+          script.onload = () => resolve(script);
+
+          script.onerror = () =>
+            reject(new Error(`Script load error for ${src}`));
+
+          document.head.append(script);
+        });
+      }
+
+      let promise1 = loadScript1(
+        `https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js`
+      );
+
+      promise1.then(
+        (script) => console.log(`Script: ${script.src} is successfully loaded`),
+        (error) => console.error(`Error loading script: ${error.message}`)
+      );
+    </script>
+  </body>
+</html>

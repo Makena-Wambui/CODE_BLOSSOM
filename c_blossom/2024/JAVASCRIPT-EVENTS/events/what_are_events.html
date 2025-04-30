@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    Events are actions that can be detected by the web browser, and
+    be responded to, for example mouse clicks or page load.
+    
+    Like displaying an alert when a user clicks a button.
+
+    An event may have an event handler: a function that runs when that event occurs.
+
+    Also called an event listener;
+    Listens for the event and executes when it happens.
+
+    -->
+
+    <button id="btn">Click Me!</button>
+
+    <!--
+    Let us define a function that will be executed when the button is clicked.
+    This function is the event handler.
+    We need to register the event handler using the addEventListener() method.
+
+    -->
+
+    <script>
+      // First we select the button with the id btn using the querySelector() method or getElementById() method.
+      // let button = document.getElementById('btn');
+      let button = document.querySelector("#btn");
+
+      // Define a function called buttonClick() that is the event handler.
+      function buttonClick() {
+        alert("Button Clicked!");
+      }
+
+      // Register the event handler using the addEventListener() method, so that when the button is clicked, the buttonClick() function is executed.
+      button.addEventListener("click", buttonClick);
+
+      /*
+        Or you can use an anonymous function like this:
+      
+        button.addEventListener('click', function () {
+            alert('Button Clicked!');
+        });
+      */
+
+      /*
+        Or you can use an arrow function like this:
+
+        button.addEventListener('click', () => {
+          alert('Button Clicked!');
+        });
+        */
+    </script>
+  </body>
+</html>

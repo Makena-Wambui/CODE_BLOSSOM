@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Loading a script dynamically using promise chaining</h2>
+
+    <script>
+      function loadScript(src) {
+        return new Promise((resolve, reject) => {
+          let scr = document.createElement("script");
+
+          scr.src = src;
+
+          scr.onload = () => resolve(scr);
+
+          scr.onerror = () => reject(new Error(`Failed to load ${src}`));
+
+          document.head.append(scr);
+        });
+      }
+      /*
+      Each loadScript call returns a promise.
+      The next .then runs when that promise resolves
+      Then it initiates the loading of the next script
+      Hence scripts are loaded one after the other.
+      We can add more asynchronous actions to the chain
+      This code is still flat, it grows down not to the right. No pyramid of doom.
+
+      */
+      loadScript("./practice1.js")
+        .then(() => loadScript("./practice2.js"))
+        .then(() => loadScript("./practice3.js"))
+        .then(() => alert(`Users: ${user1}, ${user2}, ${user3}`)) // use variables declared in the loaded scripts to check if the scripts were successfully loaded
+        .catch(console.error);
+
+      /*
+        we could add .then directly to each loadScript
+        It still loads three scripts in sequence.
+        But it grows to the right.
+        This is not a problem for three scripts, but for more complex chains it may become hard to read.
+        So we have the same problem as with callbacks.
+    */
+
+      loadScript(
+        "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"
+      )
+        .then(() =>
+          loadScript(
+            "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"
+          ).then(() =>
+            loadScript(
+              "https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"
+            ).then(() => {
+              alert(`Everything is ready!`);
+            })
+          )
+        )
+        .catch(console.error);
+    </script>
+  </body>
+</html>

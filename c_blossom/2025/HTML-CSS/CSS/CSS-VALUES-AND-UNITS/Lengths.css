@@ -1,0 +1,18 @@
+.box {
+  background-color: lightblue;
+  border: solid 5px blue;
+  margin: 20px;
+  padding: 30px;
+}
+
+.wrapper {
+  font-size: 2em;
+}
+
+.px {
+  width: 200px;
+}
+
+.vw {
+  width: 10vw;
+}

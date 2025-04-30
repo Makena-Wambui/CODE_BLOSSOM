@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">Click Me</button>
+
+    <script>
+      let button = document.getElementsByClassName("btn");
+
+      button = button[0];
+
+      // Add an event listener
+      button.addEventListener(
+        "click",
+        /* call back function is a function expression */ function (event) {
+          alert("You clicked me!");
+        }
+      );
+    </script>
+  </body>
+</html>

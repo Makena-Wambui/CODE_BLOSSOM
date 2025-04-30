@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lengths</title>
+    <link rel="stylesheet" href="Lengths.css" />
+  </head>
+  <body>
+    <!--
+        The most frequent numeric type you will come across in CSS is <length>.
+
+            Example: 10px, 30em
+
+            Types of length used in CSS: Absolute and Relative
+            Know the difference to know how big things will become
+
+            Absolute length units:
+                Are not relative to anything else
+                Always the same size
+
+                Examples:
+                   cm - centimeters - 1cm is equivalent to 37.795 pixels or 0.394 inches - centimeter smaller than an inch. it takes 2.54cm to make an inch
+
+                   mm - millimeters - 1 millimeter is 1/10th of a centimeter - 1mm is equivalent to 3.7795 pixels or 0.0394 inches
+
+                   Q - Quarter millimeter - 1/40th of a centimeter.
+
+                   in - inches - 1 inch is equivalent to 96 pixels or 2.54cm
+
+                   pc - Pica - 1pc is 1/6th of an inch.
+
+                   pt - Point - 1pt is 1/72nd of an inch.
+
+                   px - Pixels - 1px is 1/96th of an inch. The most common
+
+            Relative length Units:
+                 Relative to something else.
+
+                 Examples: 
+                   em - relative to the font size of this element, or the font size of the parent element when used for font-size
+
+                   rem - relative to the font size of the root element
+
+                   vh and vw - relative to the viewport's height and width respectively.
+                   Benefit of relative length units - You can make it so the size of text or other elements scales relative to everything else on the page. 
+    -->
+
+    <!--
+            The first box has a width set in pixels
+            Pixels are an absolute length unit
+            So this width will remain the same size no matter what changes
+
+            The second box has a width set in vw units(viewport width)
+            This is a relative length unit
+            So this value is relative to the viewport's width
+            10vw is 10% of the viewport's width
+            If the width of the browser window changes, the width of this box will change
+
+            The third box's width is set in em units.
+            This is a relative length unit
+            So it means the width of this box is relative to this element or the parent element's font size
+            We set a font size of 1em on the containing div that has a class of wrapper
+            If you change this value to 2em, the font size of all elements increases, but only the last box gets wider, as its width is relative to the font size of the wrapper
+    -->
+    <div class="wrapper">
+      <div class="box px">I am 200px wide</div>
+      <div class="box vw">I am 10vw wide</div>
+      <div class="box em">I am 5em wide</div>
+      <div></div>
+    </div>
+  </body>
+</html>

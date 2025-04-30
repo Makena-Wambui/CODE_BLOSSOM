@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- http equiv is used to set the http header in the response, IE=edge is used to tell the browser to use the latest version of the rendering engine -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport is used to set the width of the webpage to the width of the device, initial scale is used to set the initial zoom level when the page is first loaded -->
+    <title>LOGIN FORM IN HTML AND CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- link tag is used to link the external css file to the html file -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="">
+        <h1>Login</h1>
+
+        <div class="input-box">
+          <input type="text" placeholder="UserName" required />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <div class="remember-forgot">
+          <label> <input type="checkbox" />Remember Me </label>
+          <!--label tag is used to define a label for an input element, checkbox is used to create a checkbox -->
+          <a href="#">Forgot Password?</a>
+          <!-- a tag is used to create a hyperlink, href is used to define the url of the page the link goes to, # is used to define the link to the current page -->
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="register-link">
+          <p>
+            Don't have an account?
+            <a href="#">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

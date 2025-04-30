@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javascript Functions</h1>
+    <h2>Javascript CallBacks</h2>
+    <p>The result of the calculation is:</p>
+    <p id="demo"></p>
+
+    <script>
+      /*
+            Using a callback, we can call the myCalculator function with a callback, myCallback,
+            so that the calculator function runs the callback function after the calculation is complete.
+        */
+
+      function myDisplay(arg) {
+        document.getElementById("demo").innerHTML = arg;
+      }
+      function myCalculator(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum);
+      }
+      myCalculator(1, 3, myDisplay); // myDisplay is a callback function
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+     
+            Each module has its own top level scope.
+
+            The top-level scope of a module is not the global scope. In a module, top-level variables and functions do not become part of the global scope. They are local to the module.
+            In other words, each module is a separate entity, and variables, functions, classes, etc. declared in a module are only visible within that module by default.
+            Top level variables and functions in a module are not seen in other scripts.
+            
+            In this example, we import two scripts - user.js and hello.js.
+            hello.js tries to use user variable declared in user.js.
+            But it can't, because each module has its own top-level scope.
+
+            Modules should export what they want to be accessible from the outside. And import what they need.
+   -->
+    <script type="module" src="user.js"></script>
+    <script type="module" src="hello.js"></script>
+  </body>
+</html>

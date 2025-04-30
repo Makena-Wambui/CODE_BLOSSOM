@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The :invalid pseudo-class selector</title>
+    <link rel="stylesheet" href="invalid-pseudo-class.css" />
+  </head>
+  <body>
+    <form>
+      <label for="email">Email Address:</label>
+      <input id="email" type="email" name="email" value="na@me@example.com" />
+
+      <label for="secret">Secret Code: (lower case letters)</label>
+      <input
+        id="secret"
+        name="secret"
+        value="text"
+        type="text"
+        pattern="[a-z]+"
+      />
+
+      <label for="age">Your age(18 +):</label>
+      <input id="age" type="number" name="age" value="5" min="18" />
+
+      <label for="t&c">- Do you agree to ToS?</label>
+      <input id="t&c" name="t&c" type="checkbox" checked required />
+    </form>
+  </body>
+</html>

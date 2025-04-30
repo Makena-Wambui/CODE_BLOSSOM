@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <h1>Javascript Functions</h1>
+    <h2>Callback Functions</h2>
+    <p id="demo"></p>
+
+    <script>
+      const numbers = [4, 0, -1, 20, -6, 8, -2, 10, -3, 5];
+
+      /* call removeNegatives function with a callback function */
+      const positiveNumbers = removeNegatives(numbers, (x) => x >= 0);
+
+      /*
+      Callbacks really shine in asynchronous functions, where one function has to wait for another function, like waiting for a file to load.
+      */
+
+      // Display the results
+      document.getElementById("demo").innerHTML = positiveNumbers;
+
+      function removeNegatives(array, callbackFunc) {
+        const newArray = [];
+
+        for (const element of array) {
+          if (callbackFunc(element)) {
+            newArray.push(element);
+          }
+        }
+        return newArray;
+      }
+    </script>
+  </body>
+</html>

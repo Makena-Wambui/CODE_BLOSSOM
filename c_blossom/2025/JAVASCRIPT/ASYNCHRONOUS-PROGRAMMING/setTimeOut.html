@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo" style="text-align: center"></p>
+
+    <script>
+      /*
+       
+            Functions running in parallel with other functions are called asynchronous.
+
+            Good example - setTimeOut()
+
+            Callbacks are commonly used with asynchronous functions
+
+            When using setTimeOut, you specify a callback function that is executed on time out.
+
+        */
+      setTimeout(myFunc, 3000); // myFunc will be called after 3seconds
+
+      function myFunc() {
+        document.getElementById("demo").innerHTML = `Hello World.`;
+      }
+    </script>
+  </body>
+</html>

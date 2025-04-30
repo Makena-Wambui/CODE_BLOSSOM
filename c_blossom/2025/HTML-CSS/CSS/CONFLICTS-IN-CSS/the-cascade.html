@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Cascade</title>
+    <link rel="stylesheet" href="the-cascade.css" />
+  </head>
+  <body>
+    <!--
+        Inheritance is why a paragraph nested deep in the structure of your HTML is the same color as the CSS applied to the body.
+
+        Understand how Cascade defines which CSS rules apply when more than one style block apply the same property with different values to the same element.
+
+        There are 3 things to consider. Listed in increasing order of importance. Later ones overrule earlier ones.
+        1. Source order
+        2. Specificity
+        3. Importance
+
+        These 3 determine how browsers figure out exactly what CSS should be applied.
+
+        1. Source Order
+            If you have more than one rule, all of which have the same weight, then the one that comes last in the CSS wins.
+
+            The rule that is nearer the element itself overwrites the earlier ones until the last one wins and gets to style the element
+
+            Source order only matters when the specificity weights of the rules is the same.
+
+
+        2. Specificity
+            You will run into a situation where you know a rule comes later in the stylesheet but an earlier conflicting rule is applied.
+            This is because the earlier rule has a higher specificity - its more specific and is being chosen by the browser as the one to style the element
+            A class selector has more weight than an element selector.
+            Hence the properties defined in the class style block will override those defined in the element style block.
+
+            Note that it is not the entire rule that is overwritten.
+            Only the properties declared in multiple places
+            This helps avoid repetition in your CSS.
+            Define generic styles for the basic elements.
+            Then create styles for those that are different
+            In our style sheet, we have generic styles for level two headings.
+            Then created some classes that change only some of the properties and values 
+            The values defined  initially are applied to all headings.
+            Then the more specific values are applied to the headings with the classes.
+    -->
+
+    <h2>Heading with no class</h2>
+    <h2 class="small">Heading with a class of small.</h2>
+    <h2 class="bright">Heading with a class of bright.</h2>
+  </body>
+</html>

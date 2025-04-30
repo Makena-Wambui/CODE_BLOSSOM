@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Click Me!</button>
+    <script>
+      // The stopPropagation() method immediately stops the flow of an event thro the DOM tree.
+      // It prevents the event from bubbling up and stop the event from reaching any other elements.
+      // The stopPropagation() method does not prevent the default behavior of the event from occurring.
+
+      let button = document.querySelector("#btn");
+
+      button.addEventListener("click", function (event) {
+        alert("Button Clicked!");
+        // event.stopPropagation();
+      });
+
+      // Without stopPropagation() method, this alert would also be shown.
+      document.body.addEventListener("click", function () {
+        /*
+        The click event never reaches the body element because it is stopped at the button element by the stopPropagation() method.
+        */
+        alert("Body Clicked!");
+      });
+    </script>
+  </body>
+</html>

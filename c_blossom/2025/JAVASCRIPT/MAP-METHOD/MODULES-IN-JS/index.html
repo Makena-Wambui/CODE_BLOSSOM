@@ -1,0 +1,9 @@
+<html lang="en">
+  <script type="module">
+    import { sayHi } from "./sayHi.mjs";
+    /*
+              The browser automatically fetches and evaluates the module, and its imports if necessary, then runs the script.
+          */
+    document.body.innerHTML = sayHi("John");
+  </script>
+</html>
